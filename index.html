@@ -7,262 +7,3683 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>🌷 Florescer — 67 → 60 kg</title>
 <link rel="manifest" href="manifest.json">
+
 <style>
-:root{--bg:#faf7fa;--card:#fff;--text:#3f3740;--muted:#817680;--pink:#c98bb8;--pink2:#efd7e9;--lilac:#9f8ac5;--line:#eee4ed;--ok:#7eb39a;--warn:#d9ad70;--danger:#c87979;--shadow:0 10px 30px rgba(92,61,91,.09)}
-*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#fbf6fa,#f7f4f8);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--text)}
-button,input,textarea,select{font:inherit}button{cursor:pointer;border:0}.app{max-width:1180px;margin:auto;padding:22px 18px 92px}
-header{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:20px}.brand{display:flex;gap:12px;align-items:center}.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink2),#eee7fa);display:grid;place-items:center;font-size:25px}.eyebrow{font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}.brand h1{margin:2px 0;font-size:24px}.header-actions{display:flex;gap:8px}.icon-btn,.btn{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:10px 13px;color:var(--text);box-shadow:0 4px 14px rgba(70,45,70,.05)}.btn.primary{background:var(--pink);color:#fff;border-color:transparent}.btn.soft{background:var(--pink2)}.btn.danger{color:#a24f4f}
-.hero{background:linear-gradient(135deg,#fff,#f6edf5);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow);margin-bottom:18px}.hero h2{margin:0 0 5px;font-size:28px}.hero p{margin:5px 0;color:var(--muted)}.quote{margin-top:15px;font-weight:600;color:#725d70}
-.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.card{grid-column:span 6;background:var(--card);border:1px solid var(--line);border-radius:21px;padding:18px;box-shadow:var(--shadow)}.wide{grid-column:span 12}.third{grid-column:span 4}.card h3{margin:0 0 14px;font-size:17px}.muted{color:var(--muted);font-size:13px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{padding:13px;background:#faf7fa;border-radius:15px}.stat strong{display:block;font-size:20px;margin-top:4px}.progress{height:9px;background:#eee8ee;border-radius:99px;overflow:hidden}.progress>i{display:block;height:100%;background:linear-gradient(90deg,var(--pink),var(--lilac));border-radius:inherit;transition:width .4s}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.weight{font-size:38px;font-weight:800}.pill{display:inline-flex;padding:5px 9px;border-radius:99px;background:var(--pink2);font-size:12px}.formrow{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field{display:flex;flex-direction:column;gap:6px;margin-bottom:10px}.field label{font-size:12px;color:var(--muted)}.field input,.field textarea,.field select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--text);outline:none}.field textarea{min-height:95px;resize:vertical}.check{display:flex;gap:10px;align-items:flex-start;padding:10px;border-radius:12px}.check:hover{background:#fbf8fb}.check input{width:20px;height:20px;accent-color:var(--pink)}.check.done span{text-decoration:line-through;color:#9b9099}.meter-line{margin:11px 0}.meter-line .row{margin-bottom:6px}.quick{display:flex;flex-wrap:wrap;gap:8px}.quick button{padding:9px 12px;border-radius:12px;background:#f8edf6;color:#75556f}.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}.day{min-height:56px;border:1px solid var(--line);background:#fff;border-radius:11px;padding:6px;font-size:12px;position:relative;text-align:left}.day b{font-size:13px}.day.complete{background:#edf7f1;border-color:#cce5d6}.day.partial{background:#fff7e9;border-color:#f0ddb8}.day.bday{box-shadow:inset 0 0 0 2px #e7a5cb}.day.selected{outline:2px solid var(--pink)}.weekdays{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px}.weekdays span{text-align:center;font-size:11px;color:var(--muted)}.timeline{display:grid;gap:9px}.milestone{display:flex;gap:12px;padding:11px;background:#fbf8fb;border-radius:14px}.badge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.badge{padding:12px;border-radius:15px;background:#f8f5f8;border:1px solid var(--line);opacity:.45}.badge.unlocked{opacity:1;background:#fff6fb;border-color:#e8c4dc}.badge b{display:block}.nav{position:fixed;z-index:20;bottom:12px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border:1px solid var(--line);box-shadow:0 10px 35px rgba(50,30,50,.14);border-radius:20px;padding:7px;display:flex;gap:4px}.nav button{background:transparent;border-radius:14px;padding:9px 12px;color:var(--muted);font-size:12px}.nav button.active{background:var(--pink2);color:#6e4d68;font-weight:700}.modal{position:fixed;inset:0;background:rgba(43,28,43,.35);display:none;align-items:center;justify-content:center;padding:18px;z-index:30}.modal.show{display:flex}.dialog{background:#fff;border-radius:22px;max-width:620px;width:100%;max-height:90vh;overflow:auto;padding:20px;box-shadow:0 20px 60px rgba(30,20,30,.2)}.toast{position:fixed;right:18px;top:18px;z-index:50;background:#3f3740;color:#fff;padding:12px 15px;border-radius:13px;display:none}.toast.show{display:block;animation:pop .25s ease}@keyframes pop{from{transform:translateY(-8px);opacity:0}to{transform:none;opacity:1}}.confetti{position:fixed;inset:0;pointer-events:none;z-index:60}.piece{position:absolute;top:-10px;width:8px;height:14px;animation:fall 1.6s linear forwards}@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
-.hidden{display:none!important}.section{scroll-margin-top:20px}
-@media(max-width:800px){.app{padding:14px 12px 88px}.grid{grid-template-columns:1fr}.card,.wide,.third{grid-column:span 1}.hero h2{font-size:23px}.stats{grid-template-columns:1fr 1fr 1fr}.nav{width:calc(100% - 18px);justify-content:space-around}.nav button{padding:9px 7px;flex:1}.header-actions .label{display:none}.formrow{grid-template-columns:1fr}.badge-grid{grid-template-columns:1fr 1fr}.calendar{gap:4px}.day{min-height:48px;padding:5px 4px}.header-actions{gap:5px}}
+:root{
+  --bg:#faf7fa;
+  --card:#fff;
+  --text:#3f3740;
+  --muted:#817680;
+  --pink:#c98bb8;
+  --pink2:#efd7e9;
+  --lilac:#9f8ac5;
+  --line:#eee4ed;
+  --ok:#7eb39a;
+  --warn:#d9ad70;
+  --danger:#c87979;
+  --shadow:0 10px 30px rgba(92,61,91,.09)
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:linear-gradient(180deg,#fbf6fa,#f7f4f8);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;
+  color:var(--text)
+}
+
+button,input,textarea,select{font:inherit}
+button{cursor:pointer;border:0}
+
+.app{
+  max-width:1180px;
+  margin:auto;
+  padding:22px 18px 92px
+}
+
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  margin-bottom:20px
+}
+
+.brand{
+  display:flex;
+  gap:12px;
+  align-items:center
+}
+
+.logo{
+  width:48px;
+  height:48px;
+  border-radius:16px;
+  background:linear-gradient(135deg,var(--pink2),#eee7fa);
+  display:grid;
+  place-items:center;
+  font-size:25px
+}
+
+.eyebrow{
+  font-size:12px;
+  color:var(--muted);
+  letter-spacing:.08em;
+  text-transform:uppercase
+}
+
+.brand h1{
+  margin:2px 0;
+  font-size:24px
+}
+
+.header-actions{
+  display:flex;
+  gap:8px
+}
+
+.icon-btn,.btn{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:13px;
+  padding:10px 13px;
+  color:var(--text);
+  box-shadow:0 4px 14px rgba(70,45,70,.05)
+}
+
+.btn.primary{
+  background:var(--pink);
+  color:#fff;
+  border-color:transparent
+}
+
+.btn.soft{background:var(--pink2)}
+.btn.danger{color:#a24f4f}
+
+.hero{
+  background:linear-gradient(135deg,#fff,#f6edf5);
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:22px;
+  box-shadow:var(--shadow);
+  margin-bottom:18px
+}
+
+.hero h2{
+  margin:0 0 5px;
+  font-size:28px
+}
+
+.hero p{
+  margin:5px 0;
+  color:var(--muted)
+}
+
+.quote{
+  margin-top:15px;
+  font-weight:600;
+  color:#725d70
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:16px
+}
+
+.card{
+  grid-column:span 6;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:21px;
+  padding:18px;
+  box-shadow:var(--shadow)
+}
+
+.wide{grid-column:span 12}
+.third{grid-column:span 4}
+
+.card h3{
+  margin:0 0 14px;
+  font-size:17px
+}
+
+.muted{
+  color:var(--muted);
+  font-size:13px
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px
+}
+
+.stat{
+  padding:13px;
+  background:#faf7fa;
+  border-radius:15px
+}
+
+.stat strong{
+  display:block;
+  font-size:20px;
+  margin-top:4px
+}
+
+.progress{
+  height:9px;
+  background:#eee8ee;
+  border-radius:99px;
+  overflow:hidden
+}
+
+.progress>i{
+  display:block;
+  height:100%;
+  background:linear-gradient(90deg,var(--pink),var(--lilac));
+  border-radius:inherit;
+  transition:width .4s
+}
+
+.row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px
+}
+
+.weight{
+  font-size:38px;
+  font-weight:800
+}
+
+.pill{
+  display:inline-flex;
+  padding:5px 9px;
+  border-radius:99px;
+  background:var(--pink2);
+  font-size:12px
+}
+
+.formrow{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px
+}
+
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  margin-bottom:10px
+}
+
+.field label{
+  font-size:12px;
+  color:var(--muted)
+}
+
+.field input,
+.field textarea,
+.field select{
+  width:100%;
+  padding:11px 12px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#fff;
+  color:var(--text);
+  outline:none
+}
+
+.field textarea{
+  min-height:95px;
+  resize:vertical
+}
+
+.check{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  padding:10px;
+  border-radius:12px
+}
+
+.check:hover{background:#fbf8fb}
+
+.check input{
+  width:20px;
+  height:20px;
+  accent-color:var(--pink)
+}
+
+.check.done span{
+  text-decoration:line-through;
+  color:#9b9099
+}
+
+.meter-line{
+  margin:11px 0
+}
+
+.meter-line .row{
+  margin-bottom:6px
+}
+
+.quick{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px
+}
+
+.quick button{
+  padding:9px 12px;
+  border-radius:12px;
+  background:#f8edf6;
+  color:#75556f
+}
+
+.calendar{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:6px
+}
+
+.day{
+  min-height:56px;
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:11px;
+  padding:6px;
+  font-size:12px;
+  position:relative;
+  text-align:left
+}
+
+.day b{font-size:13px}
+
+.day.complete{
+  background:#edf7f1;
+  border-color:#cce5d6
+}
+
+.day.partial{
+  background:#fff7e9;
+  border-color:#f0ddb8
+}
+
+.day.bday{
+  box-shadow:inset 0 0 0 2px #e7a5cb
+}
+
+.day.selected{
+  outline:2px solid var(--pink)
+}
+
+.weekdays{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:6px;
+  margin-bottom:6px
+}
+
+.weekdays span{
+  text-align:center;
+  font-size:11px;
+  color:var(--muted)
+}
+
+.timeline{
+  display:grid;
+  gap:9px
+}
+
+.milestone{
+  display:flex;
+  gap:12px;
+  padding:11px;
+  background:#fbf8fb;
+  border-radius:14px
+}
+
+.badge-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:9px
+}
+
+.badge{
+  padding:12px;
+  border-radius:15px;
+  background:#f8f5f8;
+  border:1px solid var(--line);
+  opacity:.45
+}
+
+.badge.unlocked{
+  opacity:1;
+  background:#fff6fb;
+  border-color:#e8c4dc
+}
+
+.badge b{display:block}
+
+.nav{
+  position:fixed;
+  z-index:20;
+  bottom:12px;
+  left:50%;
+  transform:translateX(-50%);
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(12px);
+  border:1px solid var(--line);
+  box-shadow:0 10px 35px rgba(50,30,50,.14);
+  border-radius:20px;
+  padding:7px;
+  display:flex;
+  gap:4px
+}
+
+.nav button{
+  background:transparent;
+  border-radius:14px;
+  padding:9px 12px;
+  color:var(--muted);
+  font-size:12px
+}
+
+.nav button.active{
+  background:var(--pink2);
+  color:#6e4d68;
+  font-weight:700
+}
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(43,28,43,.35);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  z-index:30
+}
+
+.modal.show{display:flex}
+
+.dialog{
+  background:#fff;
+  border-radius:22px;
+  max-width:620px;
+  width:100%;
+  max-height:90vh;
+  overflow:auto;
+  padding:20px;
+  box-shadow:0 20px 60px rgba(30,20,30,.2)
+}
+
+.toast{
+  position:fixed;
+  right:18px;
+  top:18px;
+  z-index:50;
+  background:#3f3740;
+  color:#fff;
+  padding:12px 15px;
+  border-radius:13px;
+  display:none
+}
+
+.toast.show{
+  display:block;
+  animation:pop .25s ease
+}
+
+@keyframes pop{
+  from{
+    transform:translateY(-8px);
+    opacity:0
+  }
+  to{
+    transform:none;
+    opacity:1
+  }
+}
+
+.confetti{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:60
+}
+
+.piece{
+  position:absolute;
+  top:-10px;
+  width:8px;
+  height:14px;
+  animation:fall 1.6s linear forwards
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(720deg);
+    opacity:0
+  }
+}
+
+.hidden{display:none!important}
+.section{scroll-margin-top:20px}
+
+@media(max-width:800px){
+  .app{
+    padding:14px 12px 88px
+  }
+
+  .grid{
+    grid-template-columns:1fr
+  }
+
+  .card,.wide,.third{
+    grid-column:span 1
+  }
+
+  .hero h2{
+    font-size:23px
+  }
+
+  .stats{
+    grid-template-columns:1fr 1fr 1fr
+  }
+
+  .nav{
+    width:calc(100% - 18px);
+    justify-content:space-around
+  }
+
+  .nav button{
+    padding:9px 7px;
+    flex:1
+  }
+
+  .header-actions .label{
+    display:none
+  }
+
+  .formrow{
+    grid-template-columns:1fr
+  }
+
+  .badge-grid{
+    grid-template-columns:1fr 1fr
+  }
+
+  .calendar{
+    gap:4px
+  }
+
+  .day{
+    min-height:48px;
+    padding:5px 4px
+  }
+
+  .header-actions{
+    gap:5px
+  }
+}
 </style>
 
 <style>
-#authScreen{position:fixed;inset:0;z-index:100;background:linear-gradient(145deg,#fff8fc,#f2edf8);display:flex;align-items:center;justify-content:center;padding:20px}
-.auth-box{width:min(430px,100%);background:#fff;border:1px solid #eee4ed;border-radius:28px;padding:28px;box-shadow:0 20px 60px rgba(80,45,75,.14)}
-.auth-logo{width:66px;height:66px;border-radius:22px;background:linear-gradient(135deg,#efd7e9,#eee7fa);display:grid;place-items:center;font-size:32px;margin:0 auto 14px}
-.auth-box h1{text-align:center;margin:0;font-size:30px}.auth-sub{text-align:center;color:#817680;margin:7px 0 22px}
-.auth-tabs{display:grid;grid-template-columns:1fr 1fr;background:#f7f2f7;border-radius:13px;padding:4px;margin-bottom:18px}.auth-tabs button{padding:10px;border-radius:10px;background:transparent;color:#817680}.auth-tabs button.active{background:#fff;color:#6e4d68;font-weight:700;box-shadow:0 3px 10px rgba(70,45,70,.08)}
-.auth-msg{min-height:20px;font-size:13px;margin:8px 0;color:#a24f4f}.auth-help{text-align:center;margin-top:14px;font-size:12px;color:#817680}
-.auth-box .btn{width:100%;padding:13px}
+#authScreen{
+  position:fixed;
+  inset:0;
+  z-index:100;
+  background:linear-gradient(145deg,#fff8fc,#f2edf8);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px
+}
+
+.auth-box{
+  width:min(430px,100%);
+  background:#fff;
+  border:1px solid #eee4ed;
+  border-radius:28px;
+  padding:28px;
+  box-shadow:0 20px 60px rgba(80,45,75,.14)
+}
+
+.auth-logo{
+  width:66px;
+  height:66px;
+  border-radius:22px;
+  background:linear-gradient(135deg,#efd7e9,#eee7fa);
+  display:grid;
+  place-items:center;
+  font-size:32px;
+  margin:0 auto 14px
+}
+
+.auth-box h1{
+  text-align:center;
+  margin:0;
+  font-size:30px
+}
+
+.auth-sub{
+  text-align:center;
+  color:#817680;
+  margin:7px 0 22px
+}
+
+.auth-tabs{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  background:#f7f2f7;
+  border-radius:13px;
+  padding:4px;
+  margin-bottom:18px
+}
+
+.auth-tabs button{
+  padding:10px;
+  border-radius:10px;
+  background:transparent;
+  color:#817680
+}
+
+.auth-tabs button.active{
+  background:#fff;
+  color:#6e4d68;
+  font-weight:700;
+  box-shadow:0 3px 10px rgba(70,45,70,.08)
+}
+
+.auth-msg{
+  min-height:20px;
+  font-size:13px;
+  margin:8px 0;
+  color:#a24f4f
+}
+
+.auth-help{
+  text-align:center;
+  margin-top:14px;
+  font-size:12px;
+  color:#817680
+}
+
+.auth-box .btn{
+  width:100%;
+  padding:13px
+}
 </style>
 </head>
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>window.FLORESCER_SUPABASE_URL="https://sbqlqikbmqtnpccuecwm.supabase.co";window.FLORESCER_SUPABASE_KEY="sb_publishable_95uWakatSm8qjzXaPfbTnw_j4EEWHeO";</script>
+
+<script>
+window.FLORESCER_SUPABASE_URL="https://sbqlqikbmqtnpccuecwm.supabase.co";
+window.FLORESCER_SUPABASE_KEY="sb_publishable_95uWakatSm8qjzXaPfbTnw_j4EEWHeO";
+</script>
+
 <body>
+
 <div id="authScreen">
   <div class="auth-box">
+
     <div class="auth-logo">🌷</div>
+
     <h1>Florescer</h1>
-    <p class="auth-sub">Crescimento, evolução, autocuidado.</p>
+
+    <p class="auth-sub">
+      Crescimento, evolução, autocuidado.
+    </p>
+
     <div class="auth-tabs">
       <button id="loginTab" class="active">Entrar</button>
       <button id="signupTab">Criar conta</button>
     </div>
-    <div class="field"><label>E-mail</label><input id="authEmail" type="email" autocomplete="email" placeholder="voce@email.com"></div>
-    <div class="field"><label>Senha</label><input id="authPassword" type="password" autocomplete="current-password" placeholder="••••••••"></div>
-    <div id="authConfirmWrap" class="field hidden"><label>Confirmar senha</label><input id="authConfirm" type="password" autocomplete="new-password" placeholder="••••••••"></div>
+
+    <div class="field">
+      <label>E-mail</label>
+      <input id="authEmail" type="email" autocomplete="email" placeholder="voce@email.com">
+    </div>
+
+    <div class="field">
+      <label>Senha</label>
+      <input id="authPassword" type="password" autocomplete="current-password" placeholder="••••••••">
+    </div>
+
+    <div id="authConfirmWrap" class="field hidden">
+      <label>Confirmar senha</label>
+      <input id="authConfirm" type="password" autocomplete="new-password" placeholder="••••••••">
+    </div>
+
     <div id="authMsg" class="auth-msg"></div>
-    <button class="btn primary" id="authSubmit">Entrar</button>
-    <div class="auth-help">A autenticação nesta versão é local e serve para proteger o acesso neste dispositivo. Para login sincronizado entre aparelhos, será necessário conectar um backend de autenticação.</div>
+
+    <button class="btn primary" id="authSubmit">
+      Entrar
+    </button>
+
+    <div class="auth-help">
+      A autenticação nesta versão é local e serve para proteger o acesso neste dispositivo.
+      Para login sincronizado entre aparelhos, será necessário conectar um backend de autenticação.
+    </div>
+
   </div>
 </div>
 
 <div id="toast" class="toast"></div>
+
 <div class="app">
-<header><div class="brand"><div class="logo">🌷</div><div><div class="eyebrow">Acompanhamento pessoal</div><h1 id="appTitle">FLORESCER</h1></div></div><div class="header-actions"><button class="icon-btn" id="installBtn" hidden>＋ Instalar</button><button class="icon-btn" id="settingsBtn">⚙️ <span class="label">Configurações</span></button></div></header>
-<section class="hero"><h2>67 → 60 kg</h2><p>20 de agosto → 01 de outubro de 2026</p><div class="quote" id="quote"></div></section>
+
+<header>
+
+  <div class="brand">
+    <div class="logo">🌷</div>
+
+    <div>
+      <div class="eyebrow">
+        Acompanhamento pessoal
+      </div>
+
+      <h1 id="appTitle">
+        FLORESCER
+      </h1>
+    </div>
+  </div>
+
+  <div class="header-actions">
+
+    <button class="icon-btn" id="installBtn" hidden>
+      ＋ Instalar
+    </button>
+
+    <button class="icon-btn" id="settingsBtn">
+      ⚙️ <span class="label">Configurações</span>
+    </button>
+
+  </div>
+
+</header>
+
+<section class="hero">
+
+  <h2>67 → 60 kg</h2>
+
+  <p>
+    20 de agosto → 01 de outubro de 2026
+  </p>
+
+  <div class="quote" id="quote"></div>
+
+</section>
 
 <div class="grid">
-<section class="card" id="home"><h3>⚖️ Meu peso</h3><div class="row"><div><div class="muted">Peso atual</div><div class="weight"><span id="currentWeight">67,0</span> kg</div></div><span class="pill" id="remaining">Faltam 7,0 kg</span></div><div class="meter-line"><div class="row"><span class="muted">Caminho até a meta</span><b id="weightPct">0%</b></div><div class="progress"><i id="weightBar" style="width:0%"></i></div></div><div class="formrow"><div class="field"><label>Registrar peso hoje</label><input id="weightInput" type="number" step="0.1" min="0"></div><div class="field"><label>Data do registro</label><input id="weightDate" type="date"></div></div><button class="btn primary" id="saveWeight">Salvar peso</button></section>
 
-<section class="card"><h3>📊 Meu progresso</h3><div class="stats"><div class="stat">💧<strong id="waterPct">0%</strong><span class="muted">Água</span></div><div class="stat">🍽️<strong id="foodPct">0%</strong><span class="muted">Alimentação</span></div><div class="stat">☕<strong id="sugarPct">100%</strong><span class="muted">Açúcar</span></div></div><div class="meter-line"><div class="row"><span class="muted">Consistência hoje</span><b id="dayPct">0%</b></div><div class="progress"><i id="dayBar" style="width:0%"></i></div></div><p id="daysSummary" class="muted"></p></section>
+<section class="card" id="home">
 
-<section class="card"><h3>✅ Checklist de hoje</h3><div id="dailyChecklist"></div><div class="meter-line"><div class="row"><span>Seu dia está <b id="checkPct">0%</b> completo</span></div><div class="progress"><i id="checkBar" style="width:0%"></i></div></div></section>
+  <h3>⚖️ Meu peso</h3>
 
-<section class="card" id="water"><h3>💧 Minha água</h3><div class="row"><div><b id="waterAmount">0</b> / <span id="waterGoal">2000</span> ml</div><span class="pill" id="waterMsg">Vamos começar 💧</span></div><div class="progress" style="margin:12px 0"><i id="waterBar" style="width:0%"></i></div><div class="quick"><button data-water="250">+250 ml</button><button data-water="500">+500 ml</button><button data-water="750">+750 ml</button><button id="waterManual">Adicionar</button></div><p class="muted">Meta ajustável em Configurações. Histórico dos últimos 7 dias:</p><div id="waterHistory" class="quick"></div></section>
+  <div class="row">
 
-<section class="card"><h3>☕ Desafio: menos açúcar</h3><p class="muted">Antes: até 4 copinhos por dia · objetivo: não transformar em hábito diário.</p><div class="row"><b>Moccaccino/chocolate hoje</b><div><button class="btn" id="sugarMinus">−</button> <b id="sugarCount">0</b> <button class="btn" id="sugarPlus">＋</button></div></div><div class="meter-line"><div class="row"><span>0 ótimo · 1 ocasional · 2+ atenção</span><b id="sugarLabel">Você conseguiu! 💗</b></div><div class="progress"><i id="sugarBar" style="width:0%"></i></div></div><p>🔥 <b id="sugarStreak">0</b> dias sem moccaccino · <b id="sugarAvoided">0</b> copinhos evitados desde o início</p></section>
+    <div>
 
-<section class="card"><h3>🍽️ Minha estrutura de alimentação</h3><div class="timeline"><div class="milestone">🍳 <div><b>Primeira refeição</b><div class="muted">Proteína + carboidrato + fruta, se quiser</div></div></div><div class="milestone">🍛 <div><b>Almoço</b><div class="muted">Arroz + feijão + proteína + vegetais</div></div></div><div class="milestone">🍎 <div><b>Lanche</b><div class="muted">Fruta + proteína</div></div></div><div class="milestone">🌙 <div><b>Jantar</b><div class="muted">Proteína + carboidrato + vegetais</div></div></div></div><p class="muted">Você não precisa cortar arroz, feijão ou carboidratos para emagrecer.</p><div id="foodChecklist"></div></section>
+      <div class="muted">
+        Peso atual
+      </div>
 
-<section class="card"><h3>🍕 Equilíbrio 80/20</h3><div class="meter-line"><div class="row"><span>Alimentação nutritiva</span><b>80–90%</b></div><div class="progress"><i style="width:85%"></i></div></div><p>Você pode comer pizza, chocolate, bolo e outras coisas que gosta. O objetivo é equilíbrio, não perfeição.</p><div class="formrow"><div class="field"><label>Refeições planejadas</label><input id="planned" type="number" min="0"></div><div class="field"><label>Refeições livres</label><input id="free" type="number" min="0"></div></div></section>
+      <div class="weight">
+        <span id="currentWeight">67,0</span> kg
+      </div>
 
-<section class="card wide" id="calendar"><h3>📅 Calendário · 20/08 → 01/10</h3><div class="weekdays"><span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span></div><div id="calendarGrid" class="calendar"></div><p class="muted">🟢 completo · 🟡 parcial · ⚪ não preenchido · 💗 21/09 aniversário</p></section>
+    </div>
 
-<section class="card" id="progress"><h3>🎯 Metas de peso</h3><div class="timeline"><div class="milestone"><b>20/08</b><span>67 kg · COMEÇO 🌱</span></div><div class="milestone"><b>30/08</b><span>~66–66,5 kg</span></div><div class="milestone"><b>06/09</b><span>~65,5–66 kg</span></div><div class="milestone"><b>13/09</b><span>~65–65,5 kg</span></div><div class="milestone"><b>21/09</b><span>~64,5–65,5 kg · 🎂</span></div><div class="milestone"><b>01/10</b><span>~64–65 kg · 🏖️</span></div></div><p class="muted"><b>Essas são referências, não obrigações.</b></p></section>
+    <span class="pill" id="remaining">
+      Faltam 7,0 kg
+    </span>
 
-<section class="card"><h3>📈 Gráfico de peso</h3><canvas id="weightChart" height="220" style="width:100%"></canvas><div class="stats"><div class="stat"><span class="muted">Perdido desde o início</span><strong id="lost">0,0 kg</strong></div><div class="stat"><span class="muted">Caminho até a meta</span><strong id="chartPct">0%</strong></div></div></section>
+  </div>
 
-<section class="card wide"><h3>🏖️ Férias · 16/09 → 01/10</h3><p id="vacationText">Faltam X dias para as férias.</p><p class="muted">Nas férias, o objetivo continua sendo equilíbrio. Você não precisa fazer dieta perfeita.</p></section>
+  <div class="meter-line">
 
-<section class="card wide"><h3>🎂 21 de setembro · Meu aniversário 💗</h3><p>Hoje você comemora. Não é dia de compensar, passar fome ou se culpar.</p><button class="btn primary" id="birthdayBtn">🎉 Hoje eu vou aproveitar!</button></section>
+    <div class="row">
+      <span class="muted">
+        Caminho até a meta
+      </span>
 
-<section class="card" id="diary"><h3>📖 Meu diário</h3><div class="field"><label>Como me senti hoje?</label><textarea id="journal" placeholder="Escreva livremente..."></textarea></div><div class="formrow"><div class="field"><label>Nível de fome · 😣 1 → 😋 5</label><input id="hunger" type="range" min="1" max="5" value="3"><output id="hungerOut">3</output></div><div class="field"><label>Minha energia · 😴 1 → ⚡ 5</label><input id="energy" type="range" min="1" max="5" value="3"><output id="energyOut">3</output></div></div><div class="field"><label>Observações</label><textarea id="notes" placeholder="O que mais você quer registrar?"></textarea></div><button class="btn primary" id="saveDiary">Salvar diário</button></section>
+      <b id="weightPct">0%</b>
+    </div>
 
-<section class="card"><h3>🏆 Conquistas</h3><div id="badges" class="badge-grid"></div></section>
+    <div class="progress">
+      <i id="weightBar" style="width:0%"></i>
+    </div>
 
-<section class="card"><h3>📊 Resumo da semana</h3><div id="weeklySummary"></div></section>
+  </div>
 
-<section class="card wide"><h3>😔 Dia ruim</h3><button class="btn soft" id="badDay">Hoje não foi um bom dia</button><div id="badDayPanel" class="hidden" style="margin-top:12px"><p><b>Tudo bem. Um dia não define seu resultado.</b></p><div id="badChecks"></div></div></section>
+  <div class="formrow">
 
-<section class="card wide"><h3>🎯 Minhas metas</h3><div class="row" style="margin-bottom:12px"><span class="muted">Metas pessoais editáveis e salvas no dispositivo.</span><button class="btn primary" id="newGoal">＋ Nova meta</button></div><div id="goals"></div></section>
+    <div class="field">
+      <label>Registrar peso hoje</label>
+      <input id="weightInput" type="number" step="0.1" min="0">
+    </div>
+
+    <div class="field">
+      <label>Data do registro</label>
+      <input id="weightDate" type="date">
+    </div>
+
+  </div>
+
+  <button class="btn primary" id="saveWeight">
+    Salvar peso
+  </button>
+
+</section>
+
+<section class="card">
+
+  <h3>📊 Meu progresso</h3>
+
+  <div class="stats">
+
+    <div class="stat">
+      💧
+      <strong id="waterPct">0%</strong>
+      <span class="muted">Água</span>
+    </div>
+
+    <div class="stat">
+      🍽️
+      <strong id="foodPct">0%</strong>
+      <span class="muted">Alimentação</span>
+    </div>
+
+    <div class="stat">
+      ☕
+      <strong id="sugarPct">100%</strong>
+      <span class="muted">Açúcar</span>
+    </div>
+
+  </div>
+
+  <div class="meter-line">
+
+    <div class="row">
+      <span class="muted">
+        Consistência hoje
+      </span>
+
+      <b id="dayPct">0%</b>
+    </div>
+
+    <div class="progress">
+      <i id="dayBar" style="width:0%"></i>
+    </div>
+
+  </div>
+
+  <p id="daysSummary" class="muted"></p>
+
+</section>
+
+<section class="card">
+
+  <h3>✅ Checklist de hoje</h3>
+
+  <div id="dailyChecklist"></div>
+
+  <div class="meter-line">
+
+    <div class="row">
+      <span>
+        Seu dia está <b id="checkPct">0%</b> completo
+      </span>
+    </div>
+
+    <div class="progress">
+      <i id="checkBar" style="width:0%"></i>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="card" id="water">
+
+  <h3>💧 Minha água</h3>
+
+  <div class="row">
+
+    <div>
+      <b id="waterAmount">0</b> /
+      <span id="waterGoal">2000</span> ml
+    </div>
+
+    <span class="pill" id="waterMsg">
+      Vamos começar 💧
+    </span>
+
+  </div>
+
+  <div class="progress" style="margin:12px 0">
+    <i id="waterBar" style="width:0%"></i>
+  </div>
+
+  <div class="quick">
+
+    <button data-water="250">+250 ml</button>
+    <button data-water="500">+500 ml</button>
+    <button data-water="750">+750 ml</button>
+    <button id="waterManual">Adicionar</button>
+
+  </div>
+
+  <p class="muted">
+    Meta ajustável em Configurações.
+    Histórico dos últimos 7 dias:
+  </p>
+
+  <div id="waterHistory" class="quick"></div>
+
+</section>
+
+<!-- MOCCACCINO -->
+
+<section class="card">
+
+  <h3>☕ Desafio: menos açúcar</h3>
+
+  <p class="muted">
+    Antes: até 4 copinhos por dia · objetivo:
+    não transformar em hábito diário.
+  </p>
+
+  <div class="row">
+
+    <b>Moccaccino/chocolate hoje</b>
+
+    <div>
+
+      <button class="btn" id="sugarMinus">
+        −
+      </button>
+
+      <b id="sugarCount">0</b>
+
+      <button class="btn" id="sugarPlus">
+        ＋
+      </button>
+
+    </div>
+
+  </div>
+
+  <div class="meter-line">
+
+    <div class="row">
+
+      <span>
+        0 ótimo · 1 ocasional · 2+ atenção
+      </span>
+
+      <b id="sugarLabel">
+        Você conseguiu! 💗
+      </b>
+
+    </div>
+
+    <div class="progress">
+      <i id="sugarBar" style="width:0%"></i>
+    </div>
+
+  </div>
+
+  <p>
+    🔥 <b id="sugarStreak">0</b>
+    dias sem moccaccino ·
+    <b id="sugarAvoided">0</b>
+    copinhos evitados desde o início
+  </p>
+
+</section>
+
+<section class="card">
+
+  <h3>🍽️ Minha estrutura de alimentação</h3>
+
+  <div class="timeline">
+
+    <div class="milestone">
+      🍳
+      <div>
+        <b>Primeira refeição</b>
+        <div class="muted">
+          Proteína + carboidrato + fruta, se quiser
+        </div>
+      </div>
+    </div>
+
+    <div class="milestone">
+      🍛
+      <div>
+        <b>Almoço</b>
+        <div class="muted">
+          Arroz + feijão + proteína + vegetais
+        </div>
+      </div>
+    </div>
+
+    <div class="milestone">
+      🍎
+      <div>
+        <b>Lanche</b>
+        <div class="muted">
+          Fruta + proteína
+        </div>
+      </div>
+    </div>
+
+    <div class="milestone">
+      🌙
+      <div>
+        <b>Jantar</b>
+        <div class="muted">
+          Proteína + carboidrato + vegetais
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="muted">
+    Você não precisa cortar arroz, feijão ou carboidratos para emagrecer.
+  </p>
+
+  <div id="foodChecklist"></div>
+
+</section>
+
+<section class="card">
+
+  <h3>🍕 Equilíbrio 80/20</h3>
+
+  <div class="meter-line">
+
+    <div class="row">
+      <span>Alimentação nutritiva</span>
+      <b>80–90%</b>
+    </div>
+
+    <div class="progress">
+      <i style="width:85%"></i>
+    </div>
+
+  </div>
+
+  <p>
+    Você pode comer pizza, chocolate, bolo e outras coisas que gosta.
+    O objetivo é equilíbrio, não perfeição.
+  </p>
+
+  <div class="formrow">
+
+    <div class="field">
+      <label>Refeições planejadas</label>
+      <input id="planned" type="number" min="0">
+    </div>
+
+    <div class="field">
+      <label>Refeições livres</label>
+      <input id="free" type="number" min="0">
+    </div>
+
+  </div>
+
+</section>
+
+<section class="card wide" id="calendar">
+
+  <h3>📅 Calendário · 20/08 → 01/10</h3>
+
+  <div class="weekdays">
+    <span>Dom</span>
+    <span>Seg</span>
+    <span>Ter</span>
+    <span>Qua</span>
+    <span>Qui</span>
+    <span>Sex</span>
+    <span>Sáb</span>
+  </div>
+
+  <div id="calendarGrid" class="calendar"></div>
+
+  <p class="muted">
+    🟢 completo · 🟡 parcial · ⚪ não preenchido ·
+    💗 21/09 aniversário
+  </p>
+
+</section>
+
+<section class="card" id="progress">
+
+  <h3>🎯 Metas de peso</h3>
+
+  <div class="timeline">
+
+    <div class="milestone">
+      <b>20/08</b>
+      <span>67 kg · COMEÇO 🌱</span>
+    </div>
+
+    <div class="milestone">
+      <b>30/08</b>
+      <span>~66–66,5 kg</span>
+    </div>
+
+    <div class="milestone">
+      <b>06/09</b>
+      <span>~65,5–66 kg</span>
+    </div>
+
+    <div class="milestone">
+      <b>13/09</b>
+      <span>~65–65,5 kg</span>
+    </div>
+
+    <div class="milestone">
+      <b>21/09</b>
+      <span>~64,5–65,5 kg · 🎂</span>
+    </div>
+
+    <div class="milestone">
+      <b>01/10</b>
+      <span>~64–65 kg · 🏖️</span>
+    </div>
+
+  </div>
+
+  <p class="muted">
+    <b>Essas são referências, não obrigações.</b>
+  </p>
+
+</section>
+
+<section class="card">
+
+  <h3>📈 Gráfico de peso</h3>
+
+  <canvas id="weightChart" height="220" style="width:100%"></canvas>
+
+  <div class="stats">
+
+    <div class="stat">
+      <span class="muted">
+        Perdido desde o início
+      </span>
+      <strong id="lost">0,0 kg</strong>
+    </div>
+
+    <div class="stat">
+      <span class="muted">
+        Caminho até a meta
+      </span>
+      <strong id="chartPct">0%</strong>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="card wide">
+
+  <h3>🏖️ Férias · 16/09 → 01/10</h3>
+
+  <p id="vacationText">
+    Faltam X dias para as férias.
+  </p>
+
+  <p class="muted">
+    Nas férias, o objetivo continua sendo equilíbrio.
+    Você não precisa fazer dieta perfeita.
+  </p>
+
+</section>
+
+<section class="card wide">
+
+  <h3>🎂 21 de setembro · Meu aniversário 💗</h3>
+
+  <p>
+    Hoje você comemora.
+    Não é dia de compensar, passar fome ou se culpar.
+  </p>
+
+  <button class="btn primary" id="birthdayBtn">
+    🎉 Hoje eu vou aproveitar!
+  </button>
+
+</section>
+
+<section class="card" id="diary">
+
+  <h3>📖 Meu diário</h3>
+
+  <div class="field">
+
+    <label>Como me senti hoje?</label>
+
+    <textarea
+      id="journal"
+      placeholder="Escreva livremente..."
+    ></textarea>
+
+  </div>
+
+  <div class="formrow">
+
+    <div class="field">
+
+      <label>
+        Nível de fome · 😣 1 → 😋 5
+      </label>
+
+      <input
+        id="hunger"
+        type="range"
+        min="1"
+        max="5"
+        value="3"
+      >
+
+      <output id="hungerOut">3</output>
+
+    </div>
+
+    <div class="field">
+
+      <label>
+        Minha energia · 😴 1 → ⚡ 5
+      </label>
+
+      <input
+        id="energy"
+        type="range"
+        min="1"
+        max="5"
+        value="3"
+      >
+
+      <output id="energyOut">3</output>
+
+    </div>
+
+  </div>
+
+  <div class="field">
+
+    <label>Observações</label>
+
+    <textarea
+      id="notes"
+      placeholder="O que mais você quer registrar?"
+    ></textarea>
+
+  </div>
+
+  <button class="btn primary" id="saveDiary">
+    Salvar diário
+  </button>
+
+</section>
+
+<section class="card">
+
+  <h3>🏆 Conquistas</h3>
+
+  <div id="badges" class="badge-grid"></div>
+
+</section>
+
+<section class="card">
+
+  <h3>📊 Resumo da semana</h3>
+
+  <div id="weeklySummary"></div>
+
+</section>
+
+<section class="card wide">
+
+  <h3>😔 Dia ruim</h3>
+
+  <button class="btn soft" id="badDay">
+    Hoje não foi um bom dia
+  </button>
+
+  <div
+    id="badDayPanel"
+    class="hidden"
+    style="margin-top:12px"
+  >
+
+    <p>
+      <b>
+        Tudo bem. Um dia não define seu resultado.
+      </b>
+    </p>
+
+    <div id="badChecks"></div>
+
+  </div>
+
+</section>
+
+<section class="card wide">
+
+  <h3>🎯 Minhas metas</h3>
+
+  <div
+    class="row"
+    style="margin-bottom:12px"
+  >
+
+    <span class="muted">
+      Metas pessoais editáveis e salvas no dispositivo.
+    </span>
+
+    <button class="btn primary" id="newGoal">
+      ＋ Nova meta
+    </button>
+
+  </div>
+
+  <div id="goals"></div>
+
+</section>
+
 </div>
 </div>
 
-<nav class="nav"><button data-scroll="home" class="active">🏠 Início</button><button data-scroll="calendar">📅 Calendário</button><button data-scroll="water">💧 Água</button><button data-scroll="progress">📊 Progresso</button><button data-scroll="diary">📖 Diário</button></nav>
+<nav class="nav">
 
-<div id="modal" class="modal"><div class="dialog" id="dialog"></div></div>
+  <button data-scroll="home" class="active">
+    🏠 Início
+  </button>
+
+  <button data-scroll="calendar">
+    📅 Calendário
+  </button>
+
+  <button data-scroll="water">
+    💧 Água
+  </button>
+
+  <button data-scroll="progress">
+    📊 Progresso
+  </button>
+
+  <button data-scroll="diary">
+    📖 Diário
+  </button>
+
+</nav>
+
+<div id="modal" class="modal">
+  <div class="dialog" id="dialog"></div>
+</div>
+
 <div id="confetti" class="confetti"></div>
-<script>
-const START='2026-08-20', END='2026-10-01', BDAY='2026-09-21', VAC='2026-09-16';
-const checklist=['Bebi minha meta de água','Evitei moccaccino/chocolate da máquina','Fiz refeições completas','Comi alguma fonte de proteína nos lanches','Comi frutas','Não fiquei muitas horas sem comer','Jantei sem exagerar','Voltei ao plano depois de algum deslize'];
-const foodItems=['Comi proteína','Comi fruta','Comi vegetais','Fiz uma refeição completa','Não fiquei o dia inteiro sem comer'];
-const quotes=['Você não precisa ser perfeita. Só precisa continuar. 💗','Um dia ruim não apaga uma semana boa.','Seu objetivo é consistência, não perfeição.','Você está cuidando de você.','Cada escolha conta.','67 kg é o ponto de partida, não o destino.','Você não precisa ter pressa.','Hoje também conta.'];
-const defaults={name:'TATI',initialWeight:67,goalWeight:60,waterGoal:2000,theme:'light',showMotivation:true,goals:[]};
-let db, state={...defaults}, deferredPrompt=null;
 
-const iso=d=>d.toISOString().slice(0,10), parse=s=>new Date(s+'T12:00:00');
-const today=()=>{let d=new Date(); let s=iso(d); return s};
+<script>
+
+const START='2026-08-20';
+const END='2026-10-01';
+const BDAY='2026-09-21';
+const VAC='2026-09-16';
+
+const checklist=[
+  'Bebi minha meta de água',
+  'Evitei moccaccino/chocolate da máquina',
+  'Fiz refeições completas',
+  'Comi alguma fonte de proteína nos lanches',
+  'Comi frutas',
+  'Não fiquei muitas horas sem comer',
+  'Jantei sem exagerar',
+  'Voltei ao plano depois de algum deslize'
+];
+
+const foodItems=[
+  'Comi proteína',
+  'Comi fruta',
+  'Comi vegetais',
+  'Fiz uma refeição completa',
+  'Não fiquei o dia inteiro sem comer'
+];
+
+const quotes=[
+  'Você não precisa ser perfeita. Só precisa continuar. 💗',
+  'Um dia ruim não apaga uma semana boa.',
+  'Seu objetivo é consistência, não perfeição.',
+  'Você está cuidando de você.',
+  'Cada escolha conta.',
+  '67 kg é o ponto de partida, não o destino.',
+  'Você não precisa ter pressa.',
+  'Hoje também conta.'
+];
+
+const defaults={
+  name:'TATI',
+  initialWeight:67,
+  goalWeight:60,
+  waterGoal:2000,
+  theme:'light',
+  showMotivation:true,
+  goals:[]
+};
+
+let db;
+let state={...defaults};
+let deferredPrompt=null;
+
+const iso=d=>d.toISOString().slice(0,10);
+
+const parse=s=>new Date(s+'T12:00:00');
+
+const today=()=>{
+  let d=new Date();
+  return iso(d);
+};
+
 const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
-function toast(t){let e=document.getElementById('toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),1800)}
-function reqDB(){return new Promise((res,rej)=>{let r=indexedDB.open('ProjetoTatiDB',1);r.onupgradeneeded=()=>{let d=r.result;if(!d.objectStoreNames.contains('days'))d.createObjectStore('days',{keyPath:'date'});if(!d.objectStoreNames.contains('meta'))d.createObjectStore('meta',{keyPath:'key'});if(!d.objectStoreNames.contains('weights'))d.createObjectStore('weights',{keyPath:'id',autoIncrement:true})};r.onsuccess=()=>{db=r.result;res()};r.onerror=()=>rej(r.error)})}
-function tx(store,mode='readonly'){return db.transaction(store,mode).objectStore(store)}
-function get(store,key){return new Promise(r=>{let q=tx(store).get(key);q.onsuccess=()=>r(q.result)})}
-function all(store){return new Promise(r=>{let q=tx(store).getAll();q.onsuccess=()=>r(q.result||[])})}
-function put(store,obj){return new Promise(r=>{let q=tx(store,'readwrite').put(obj);q.onsuccess=()=>r(q.result)})}
-function del(store,key){return new Promise(r=>{let q=tx(store,'readwrite').delete(key);q.onsuccess=()=>r()})}
-async function load(){let s=await get('meta','state');if(s)state={...defaults,...s.value};let goals=await get('meta','goals');if(goals)state.goals=goals.value;document.documentElement.dataset.theme=state.theme;applyTheme()}
-async function saveState(){await put('meta',{key:'state',value:state})}
-async function dayData(date=today()){return (await get('days',date))||{date,checklist:Array(checklist.length).fill(false),food:Array(foodItems.length).fill(false),water:0,sugar:0,journal:'',hunger:3,energy:3,notes:'',planned:0,free:0}}
-async function saveDay(d){await put('days',d)}
-function fmt(n){return Number(n).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})}
-function pctWeight(w){return clamp(((state.initialWeight-w)/(state.initialWeight-state.goalWeight))*100,0,100)}
-function dateRange(){let a=[],d=parse(START),e=parse(END);while(d<=e){a.push(iso(d));d.setDate(d.getDate()+1)}return a}
-function daysInPeriod(){return dateRange()}
-async function render(){let d=await dayData();document.getElementById('appTitle').textContent='PROJETO '+(state.name||'TATI').toUpperCase();document.getElementById('quote').textContent=state.showMotivation?quotes[Math.floor((Date.now()/86400000))%quotes.length]:'';let weights=await all('weights');weights.sort((a,b)=>a.date.localeCompare(b.date));let latest=weights.at(-1)?.weight??state.initialWeight;document.getElementById('currentWeight').textContent=fmt(latest);document.getElementById('weightInput').value=latest;document.getElementById('weightDate').value=today();let wp=pctWeight(latest);document.getElementById('weightPct').textContent=Math.round(wp)+'%';document.getElementById('weightBar').style.width=wp+'%';document.getElementById('remaining').textContent='Faltam '+fmt(Math.max(0,state.goalWeight-latest))+' kg';document.getElementById('lost').textContent=fmt(state.initialWeight-latest)+' kg';document.getElementById('chartPct').textContent=Math.round(wp)+'%';
-let water=clamp(d.water,0,99999), wgoal=state.waterGoal;document.getElementById('waterAmount').textContent=water.toLocaleString('pt-BR');document.getElementById('waterGoal').textContent=wgoal.toLocaleString('pt-BR');let wpc=clamp(water/wgoal*100,0,100);document.getElementById('waterPct').textContent=Math.round(wpc)+'%';document.getElementById('waterBar').style.width=wpc+'%';document.getElementById('waterMsg').textContent=water>=wgoal?'Meta de água atingida! 💧✨':'Vamos começar 💧';
-renderChecks(d);renderFood(d);document.getElementById('sugarCount').textContent=d.sugar;document.getElementById('sugarBar').style.width=Math.min(100,d.sugar*50)+'%';document.getElementById('sugarLabel').textContent=d.sugar===0?'Você conseguiu! 💗':d.sugar===1?'Ocasional 🌷':'Atenção, sem culpa 💗';document.getElementById('sugarPct').textContent=Math.max(0,100-d.sugar*30)+'%';
-let dates=daysInPeriod(),done=0;for(let x of dates){let q=await dayData(x);let score=q.checklist.filter(Boolean).length;if(score===checklist.length)done++;}let elapsed=clamp(Math.floor((parse(today())-parse(START))/86400000)+1,0,dates.length);document.getElementById('daysSummary').textContent=`${done} dias concluídos de ${dates.length} · ${Math.max(0,dates.length-elapsed)} dias restantes no período`;document.getElementById('sugarStreak').textContent=await sugarStreak();document.getElementById('sugarAvoided').textContent=Math.max(0,dates.length*4-(await totalSugar()));
-let completed=d.checklist.filter(Boolean).length, daypc=Math.round(completed/checklist.length*100);document.getElementById('dayPct').textContent=daypc+'%';document.getElementById('dayBar').style.width=daypc+'%';document.getElementById('checkPct').textContent=daypc+'%';document.getElementById('checkBar').style.width=daypc+'%';let foodpc=Math.round(d.food.filter(Boolean).length/foodItems.length*100);document.getElementById('foodPct').textContent=foodpc+'%';renderCalendar();renderDiary(d);renderBadges(weights,done);renderWeekly();renderGoals();renderWaterHistory();drawChart(weights);let now=parse(today());let vac=parse(VAC);document.getElementById('vacationText').textContent=now<vac?`Faltam ${Math.ceil((vac-now)/86400000)} dias para as férias.`:'Você está de férias! 🌴💗';}
-function renderChecks(d){document.getElementById('dailyChecklist').innerHTML=checklist.map((x,i)=>`<label class="check ${d.checklist[i]?'done':''}"><input type="checkbox" data-check="${i}" ${d.checklist[i]?'checked':''}><span>${x}</span></label>`).join('')}
-function renderFood(d){document.getElementById('foodChecklist').innerHTML=foodItems.map((x,i)=>`<label class="check ${d.food[i]?'done':''}"><input type="checkbox" data-food="${i}" ${d.food[i]?'checked':''}><span>${x}</span></label>`).join('')}
-async function sugarStreak(){let dates=daysInPeriod().reverse(),n=0;for(let x of dates){let d=await dayData(x);if(d.sugar===0)n++;else break}return n}
-async function totalSugar(){let n=0;for(let x of daysInPeriod())n+=(await dayData(x)).sugar||0;return n}
-async function renderWaterHistory(){let arr=[];for(let x of daysInPeriod().slice(-7)){let d=await dayData(x);arr.push(`<span class="pill">${x.slice(5)} · ${(d.water/1000).toFixed(1)}L</span>`)}document.getElementById('waterHistory').innerHTML=arr.join('')}
-function renderCalendar(){let g=document.getElementById('calendarGrid');g.innerHTML='';let a=parse(START),offset=a.getDay();for(let i=0;i<offset;i++)g.innerHTML+='<div></div>';for(let x of daysInPeriod()){let b=document.createElement('button');b.className='day';b.dataset.date=x;b.innerHTML=`<b>${parse(x).getDate()}</b><br><span class="muted">${x===BDAY?'🎂':x===today()?'Hoje':''}</span>`;dayData(x).then(d=>{let score=d.checklist.filter(Boolean).length;b.classList.toggle('complete',score===checklist.length);b.classList.toggle('partial',score>0&&score<checklist.length);b.classList.toggle('bday',x===BDAY)});b.onclick=()=>openDay(x);g.appendChild(b)}}
-async function openDay(date){let d=await dayData(date);openModal(`<div class="row"><h3>📅 ${date.split('-').reverse().join('/')}</h3><button class="icon-btn" onclick="closeModal()">✕</button></div><div class="field"><label>Peso (kg)</label><input id="modalWeight" type="number" step=".1" value=""></div><div class="field"><label>Água (ml)</label><input id="modalWater" type="number" value="${d.water}"></div><div class="field"><label>Moccaccinos/chocolates</label><input id="modalSugar" type="number" min="0" value="${d.sugar}"></div><div class="field"><label>Observações</label><textarea id="modalNotes">${d.notes||''}</textarea></div><button class="btn primary" id="saveDayModal">Salvar dia</button>`);let w=await all('weights');let found=w.find(q=>q.date===date);document.getElementById('modalWeight').value=found?.weight??'';document.getElementById('saveDayModal').onclick=async()=>{d.water=+document.getElementById('modalWater').value||0;d.sugar=Math.max(0,+document.getElementById('modalSugar').value||0);d.notes=document.getElementById('modalNotes').value;await saveDay(d);if(document.getElementById('modalWeight').value)await put('weights',{id:found?.id,date,weight:+document.getElementById('modalWeight').value});closeModal();toast('Dia salvo com sucesso.');render()}}
-function renderDiary(d){journal.value=d.journal||'';hunger.value=d.hunger||3;energy.value=d.energy||3;notes.value=d.notes||'';hungerOut.value=hunger.value;energyOut.value=energy.value}
-function renderBadges(weights,done){let first=done>=1,water=JSON.stringify([]);let maxLost=Math.max(0,...weights.map(w=>state.initialWeight-w.weight));let latest=weights.at(-1)?.weight??state.initialWeight;let defs=[['🌱','Primeiro dia concluído',first],['💧','2 L de água',false],['☕','3 dias sem moccaccino',false],['🔥','7 dias de consistência',done>=7],['🌷','14 dias de consistência',done>=14],['🏆','30 dias acompanhando',done>=30],['⚖️','Primeiro kg perdido',maxLost>=1],['🎯','Chegou aos 65 kg',latest<=65],['💗','Chegou aos 63 kg',latest<=63],['👑','Chegou aos 60 kg',latest<=60]];badges.innerHTML=defs.map(x=>`<div class="badge ${x[2]?'unlocked':''}"><b>${x[0]} ${x[1]}</b><span class="muted">${x[2]?'Desbloqueada':'Bloqueada'}</span></div>`).join('')}
-async function renderWeekly(){let dates=daysInPeriod(), end=parse(today()), start=new Date(end);start.setDate(start.getDate()-6);let ds=dates.filter(x=>parse(x)>=start&&parse(x)<=end), ws=[];for(let x of ds){let d=await dayData(x);ws.push({date:x,d})}let waters=ws.map(x=>x.d.water),complete=ws.filter(x=>x.d.checklist.every(Boolean)).length,sugar=ws.reduce((a,x)=>a+x.d.sugar,0);let weights=await all('weights');let ww=weights.filter(x=>parse(x.date)>=start&&parse(x.date)<=end).sort((a,b)=>a.date.localeCompare(b.date));let diff=ww.length>1?ww.at(-1).weight-ww[0].weight:0;weeklySummary.innerHTML=`<p>Peso inicial da semana: <b>${ww[0]?fmt(ww[0].weight)+' kg':'—'}</b></p><p>Peso final da semana: <b>${ww.at(-1)?fmt(ww.at(-1).weight)+' kg':'—'}</b></p><p>Diferença: <b>${ww.length>1?fmt(diff)+' kg':'—'}</b></p><p>Média de água: <b>${ws.length?(waters.reduce((a,b)=>a+b,0)/waters.length/1000).toFixed(1).replace('.',',')+' L':'—'}</b></p><p>Dias completos: <b>${complete} de ${ds.length}</b> · Moccaccinos: <b>${sugar}</b></p>`}
-function renderGoals(){let el=document.getElementById('goals');if(!state.goals.length){el.innerHTML='<p class="muted">Nenhuma meta criada ainda.</p>';return}el.innerHTML=state.goals.map((g,i)=>`<div class="milestone"><div style="flex:1"><div class="row"><b style="${g.done?'text-decoration:line-through':''}">${g.title}</b><button class="icon-btn" onclick="editGoal(${i})">✏️</button></div><div class="muted">${g.desc||''} ${g.due?'· prazo '+g.due:''}</div></div><input type="checkbox" style="width:22px;height:22px;accent-color:var(--pink)" ${g.done?'checked':''} onchange="toggleGoal(${i},this.checked)"></div>`).join('')}
-async function drawChart(weights){let c=document.getElementById('weightChart'),ctx=c.getContext('2d'),r=window.devicePixelRatio||1,w=c.clientWidth,h=220;c.width=w*r;c.height=h*r;ctx.scale(r,r);ctx.clearRect(0,0,w,h);ctx.font='12px system-ui';ctx.fillStyle='#817680';let allW=[{date:START,weight:state.initialWeight},...weights].sort((a,b)=>a.date.localeCompare(b.date));let min=Math.min(state.goalWeight,...allW.map(x=>x.weight))-1,max=Math.max(state.initialWeight,...allW.map(x=>x.weight))+1;ctx.strokeStyle='#eee4ed';for(let i=0;i<5;i++){let y=25+i*(h-50)/4;ctx.beginPath();ctx.moveTo(35,y);ctx.lineTo(w-12,y);ctx.stroke();ctx.fillText((max-(max-min)*i/4).toFixed(1),3,y+4)}let yGoal=25+(max-state.goalWeight)/(max-min)*(h-50);ctx.setLineDash([5,5]);ctx.strokeStyle='#c98bb8';ctx.beginPath();ctx.moveTo(35,yGoal);ctx.lineTo(w-12,yGoal);ctx.stroke();ctx.setLineDash([]);ctx.strokeStyle='#9f8ac5';ctx.lineWidth=3;ctx.beginPath();allW.forEach((p,i)=>{let x=35+(parse(p.date)-parse(START))/(parse(END)-parse(START))*(w-47),y=25+(max-p.weight)/(max-min)*(h-50);i?ctx.lineTo(x,y):ctx.moveTo(x,y);});ctx.stroke();ctx.fillStyle='#9f8ac5';allW.forEach(p=>{let x=35+(parse(p.date)-parse(START))/(parse(END)-parse(START))*(w-47),y=25+(max-p.weight)/(max-min)*(h-50);ctx.beginPath();ctx.arc(x,y,4,0,Math.PI*2);ctx.fill()});}
-function openModal(body){document.getElementById('dialog').innerHTML=body;document.getElementById('modal').classList.add('show')}function closeModal(){document.getElementById('modal').classList.remove('show')}
-async function settings(){openModal(`<div class="row"><h3>⚙️ Configurações</h3><button class="icon-btn" onclick="closeModal()">✕</button></div><div class="field"><label>Nome exibido</label><input id="setName" value="${state.name}"></div><div class="formrow"><div class="field"><label>Peso inicial</label><input id="setInitial" type="number" step=".1" value="${state.initialWeight}"></div><div class="field"><label>Meta de peso</label><input id="setGoal" type="number" step=".1" value="${state.goalWeight}"></div></div><div class="field"><label>Meta diária de água (ml)</label><input id="setWater" type="number" value="${state.waterGoal}"></div><div class="field"><label>Aparência</label><select id="setTheme"><option value="light" ${state.theme==='light'?'selected':''}>Clara</option><option value="dark" ${state.theme==='dark'?'selected':''}>Escura</option></select></div><label class="check"><input id="setMotivation" type="checkbox" ${state.showMotivation?'checked':''}><span>Mostrar frase motivacional</span></label><div class="quick"><button class="btn primary" id="saveSettings">Salvar configurações</button><button class="btn" id="logoutBtn">Sair da conta</button><button class="btn danger" id="clearData">Limpar todos os dados</button></div>`);saveSettings.onclick=async()=>{state.name=setName.value||'TATI';state.initialWeight=+setInitial.value||67;state.goalWeight=+setGoal.value||60;state.waterGoal=+setWater.value||2000;state.theme=setTheme.value;state.showMotivation=setMotivation.checked;await saveState();applyTheme();closeModal();toast('Configurações salvas.');render()};clearData.onclick=async()=>{if(confirm('Apagar todos os dados locais do aplicativo?')){indexedDB.deleteDatabase('ProjetoTatiDB');location.reload()}}}
-function applyTheme(){if(state.theme==='dark'){document.documentElement.style.setProperty('--bg','#211c22');document.documentElement.style.setProperty('--card','#2b252c');document.documentElement.style.setProperty('--text','#f5edf5');document.documentElement.style.setProperty('--muted','#b9aeb9');document.documentElement.style.setProperty('--line','#443b45')}else{document.documentElement.style.removeProperty('--bg');document.documentElement.style.removeProperty('--card');document.documentElement.style.removeProperty('--text');document.documentElement.style.removeProperty('--muted');document.documentElement.style.removeProperty('--line')}}
-function confetti(){let c=document.getElementById('confetti');c.innerHTML='';for(let i=0;i<45;i++){let p=document.createElement('i');p.className='piece';p.style.left=Math.random()*100+'%';p.style.background=['#c98bb8','#9f8ac5','#e8b3d3','#d9ad70'][i%4];p.style.animationDelay=Math.random()*.4+'s';c.appendChild(p)}setTimeout(()=>c.innerHTML='',1900)}
-async function newGoal(i=null){let g=i==null?{title:'',desc:'',due:'',done:false}:state.goals[i];openModal(`<div class="row"><h3>${i==null?'🎯 Nova meta':'✏️ Editar meta'}</h3><button class="icon-btn" onclick="closeModal()">✕</button></div><div class="field"><label>Título</label><input id="gTitle" value="${g.title}"></div><div class="field"><label>Descrição / detalhes</label><textarea id="gDesc">${g.desc||''}</textarea></div><div class="field"><label>Prazo</label><input id="gDue" type="date" value="${g.due||''}"></div><button class="btn primary" id="saveGoal">Salvar meta</button>${i!=null?'<button class="btn danger" id="deleteGoal" style="margin-left:8px">Excluir</button>':''}`);saveGoal.onclick=async()=>{let n={...g,title:gTitle.value.trim()||'Meta sem título',desc:gDesc.value,due:gDue.value,lastEdit:Date.now()};if(i==null)state.goals.push(n);else state.goals[i]=n;await put('meta',{key:'goals',value:state.goals});closeModal();toast('Meta salva com sucesso.');render()};if(i!=null)deleteGoal.onclick=async()=>{if(confirm('Excluir esta meta?')){state.goals.splice(i,1);await put('meta',{key:'goals',value:state.goals});closeModal();toast('Meta excluída.');render()}}}
-function editGoal(i){newGoal(i)}async function toggleGoal(i,v){state.goals[i].done=v;state.goals[i].completedAt=v?today():null;await put('meta',{key:'goals',value:state.goals});toast(v?'Meta concluída.':'Meta reaberta.');render()}
-document.addEventListener('click',async e=>{let w=e.target.dataset.water;if(w){let d=await dayData();d.water+=+w;await saveDay(d);toast('Água atualizada.');render()}if(e.target.matches('[data-check]')){let d=await dayData();d.checklist[+e.target.dataset.check]=e.target.checked;await saveDay(d);render()}if(e.target.matches('[data-food]')){let d=await dayData();d.food[+e.target.dataset.food]=e.target.checked;await saveDay(d);render()}});
-document.getElementById('sugarPlus').onclick=async()=>{let d=await dayData();d.sugar++;await saveDay(d);render()};document.getElementById('sugarMinus').onclick=async()=>{let d=await dayData();d.sugar=Math.max(0,d.sugar-1);await saveDay(d);render()};
-document.getElementById('waterManual').onclick=async()=>{let n=prompt('Quantos ml você quer adicionar?','250');if(n){let d=await dayData();d.water+=Math.max(0,+n||0);await saveDay(d);render()}};
-document.getElementById('saveWeight').onclick=async()=>{let w=+weightInput.value;if(!w)return;await put('weights',{date:weightDate.value||today(),weight:w});toast('Peso salvo.');render()};
-document.getElementById('saveDiary').onclick=async()=>{let d=await dayData();d.journal=journal.value;d.hunger=+hunger.value;d.energy=+energy.value;d.notes=notes.value;d.planned=+planned.value||0;d.free=+free.value||0;await saveDay(d);toast('Diário salvo.');render()};
-hunger.oninput=()=>hungerOut.value=hunger.value;energy.oninput=()=>energyOut.value=energy.value;
-document.getElementById('settingsBtn').onclick=settings;document.getElementById('newGoal').onclick=()=>newGoal();document.getElementById('birthdayBtn').onclick=()=>confetti();
-document.getElementById('badDay').onclick=()=>{badDayPanel.classList.toggle('hidden');badChecks.innerHTML=['Beber água','Fazer uma refeição normal','Não compensar pulando refeições','Recomeçar na próxima refeição'].map(x=>`<label class="check"><input type="checkbox"><span>${x}</span></label>`).join('')};
-document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.scroll).scrollIntoView({behavior:'smooth',block:'start'})});
-window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;installBtn.hidden=false});installBtn.onclick=async()=>{if(deferredPrompt){deferredPrompt.prompt();deferredPrompt=null}};
-document.getElementById('modal').onclick=e=>{if(e.target.id==='modal')closeModal()};
-(async()=>{await reqDB();await load();await render();if('serviceWorker' in navigator && location.protocol!=='file:')navigator.serviceWorker.register('sw.js').catch(()=>{})})();
+
+function toast(t){
+  let e=document.getElementById('toast');
+  e.textContent=t;
+  e.classList.add('show');
+
+  setTimeout(()=>{
+    e.classList.remove('show');
+  },1800);
+}
+
+function reqDB(){
+  return new Promise((res,rej)=>{
+
+    let r=indexedDB.open('ProjetoTatiDB',1);
+
+    r.onupgradeneeded=()=>{
+      let d=r.result;
+
+      if(!d.objectStoreNames.contains('days'))
+        d.createObjectStore('days',{keyPath:'date'});
+
+      if(!d.objectStoreNames.contains('meta'))
+        d.createObjectStore('meta',{keyPath:'key'});
+
+      if(!d.objectStoreNames.contains('weights'))
+        d.createObjectStore('weights',{
+          keyPath:'id',
+          autoIncrement:true
+        });
+    };
+
+    r.onsuccess=()=>{
+      db=r.result;
+      res();
+    };
+
+    r.onerror=()=>rej(r.error);
+
+  });
+}
+
+function tx(store,mode='readonly'){
+  return db.transaction(store,mode).objectStore(store);
+}
+
+function get(store,key){
+  return new Promise(r=>{
+    let q=tx(store).get(key);
+    q.onsuccess=()=>r(q.result);
+  });
+}
+
+function all(store){
+  return new Promise(r=>{
+    let q=tx(store).getAll();
+    q.onsuccess=()=>r(q.result||[]);
+  });
+}
+
+function put(store,obj){
+  return new Promise(r=>{
+    let q=tx(store,'readwrite').put(obj);
+    q.onsuccess=()=>r(q.result);
+  });
+}
+
+function del(store,key){
+  return new Promise(r=>{
+    let q=tx(store,'readwrite').delete(key);
+    q.onsuccess=()=>r();
+  });
+}
+
+async function load(){
+
+  let s=await get('meta','state');
+
+  if(s)
+    state={...defaults,...s.value};
+
+  let goals=await get('meta','goals');
+
+  if(goals)
+    state.goals=goals.value;
+
+  document.documentElement.dataset.theme=state.theme;
+
+  applyTheme();
+}
+
+async function saveState(){
+  await put('meta',{
+    key:'state',
+    value:state
+  });
+}
+
+async function dayData(date=today()){
+
+  return (await get('days',date))||{
+    date,
+    checklist:Array(checklist.length).fill(false),
+    food:Array(foodItems.length).fill(false),
+    water:0,
+    sugar:0,
+    journal:'',
+    hunger:3,
+    energy:3,
+    notes:'',
+    planned:0,
+    free:0
+  };
+
+}
+
+async function saveDay(d){
+  await put('days',d);
+}
+
+function fmt(n){
+  return Number(n).toLocaleString('pt-BR',{
+    minimumFractionDigits:1,
+    maximumFractionDigits:1
+  });
+}
+
+function pctWeight(w){
+  return clamp(
+    ((state.initialWeight-w)/
+    (state.initialWeight-state.goalWeight))*100,
+    0,
+    100
+  );
+}
+
+function dateRange(){
+
+  let a=[];
+  let d=parse(START);
+  let e=parse(END);
+
+  while(d<=e){
+
+    a.push(iso(d));
+
+    d.setDate(d.getDate()+1);
+
+  }
+
+  return a;
+}
+
+function daysInPeriod(){
+  return dateRange();
+}
+
+
+/* =========================================================
+   CORREÇÃO DO MOCCACCINO
+   ========================================================= */
+
+/*
+  A sequência começa em 0 no primeiro dia.
+
+  Exemplo:
+
+  20/08 → 0
+  21/08 → 1
+  22/08 → 2
+  23/08 → 3
+
+  Se houver moccaccino em algum dia:
+
+  20/08 → 0
+  21/08 → 1
+  22/08 → tomou moccaccino → 0
+  23/08 → 1
+
+  O dia atual NÃO é contado como um dia completo.
+  Assim, no primeiro dia do projeto o contador começa em 0.
+*/
+
+async function sugarStreak(){
+
+  const dates=daysInPeriod();
+
+  const current=today();
+
+  /*
+    Consideramos somente dias anteriores ao dia atual.
+    Isso evita que o dia de hoje seja contado imediatamente.
+  */
+
+  const completedDates=dates.filter(
+    date=>date<current
+  );
+
+  let streak=0;
+
+  /*
+    Começamos pelo dia imediatamente anterior
+    e voltamos até encontrar um dia com moccaccino.
+  */
+
+  for(
+    let i=completedDates.length-1;
+    i>=0;
+    i--
+  ){
+
+    const d=await dayData(
+      completedDates[i]
+    );
+
+    if((d.sugar||0)===0){
+
+      streak++;
+
+    }else{
+
+      break;
+
+    }
+
+  }
+
+  return streak;
+}
+
+
+/*
+  CORREÇÃO DOS COPINHOS EVITADOS
+
+  Antes o cálculo usava:
+
+  dates.length * 4
+
+  Isso contava também os dias FUTUROS.
+
+  Agora calculamos apenas os dias que já aconteceram.
+
+  Exemplo no dia 20/08:
+
+  0 dias completos × 4 = 0 copinhos evitados.
+
+  No dia 21/08:
+
+  1 dia completo × 4 = 4 possíveis copinhos evitados,
+
+  descontando os copinhos realmente registrados.
+*/
+
+async function totalSugar(){
+
+  const current=today();
+
+  const completedDates=daysInPeriod().filter(
+    date=>date<current
+  );
+
+  let total=0;
+
+  for(const date of completedDates){
+
+    const d=await dayData(date);
+
+    total+=(d.sugar||0);
+
+  }
+
+  return total;
+}
+
+
+/*
+  Calcula quantos copinhos poderiam ter sido consumidos
+  nos dias completos do projeto.
+
+  Limite considerado: 4 por dia.
+*/
+
+async function sugarAvoided(){
+
+  const current=today();
+
+  const completedDates=daysInPeriod().filter(
+    date=>date<current
+  );
+
+  let possible=completedDates.length*4;
+
+  let consumed=await totalSugar();
+
+  return Math.max(
+    0,
+    possible-consumed
+  );
+}
+
+
+/* =========================================================
+   RENDER PRINCIPAL
+   ========================================================= */
+
+async function render(){
+
+  let d=await dayData();
+
+  document.getElementById('appTitle').textContent=
+    'PROJETO '+(state.name||'TATI').toUpperCase();
+
+  document.getElementById('quote').textContent=
+    state.showMotivation
+      ?quotes[Math.floor((Date.now()/86400000))%quotes.length]
+      :'';
+
+  let weights=await all('weights');
+
+  weights.sort(
+    (a,b)=>a.date.localeCompare(b.date)
+  );
+
+  let latest=
+    weights.at(-1)?.weight??
+    state.initialWeight;
+
+  document.getElementById('currentWeight').textContent=
+    fmt(latest);
+
+  document.getElementById('weightInput').value=
+    latest;
+
+  document.getElementById('weightDate').value=
+    today();
+
+  let wp=pctWeight(latest);
+
+  document.getElementById('weightPct').textContent=
+    Math.round(wp)+'%';
+
+  document.getElementById('weightBar').style.width=
+    wp+'%';
+
+  document.getElementById('remaining').textContent=
+    'Faltam '+
+    fmt(Math.max(0,state.goalWeight-latest))+
+    ' kg';
+
+  document.getElementById('lost').textContent=
+    fmt(state.initialWeight-latest)+' kg';
+
+  document.getElementById('chartPct').textContent=
+    Math.round(wp)+'%';
+
+
+  /* ÁGUA */
+
+  let water=clamp(d.water,0,99999);
+
+  let wgoal=state.waterGoal;
+
+  document.getElementById('waterAmount').textContent=
+    water.toLocaleString('pt-BR');
+
+  document.getElementById('waterGoal').textContent=
+    wgoal.toLocaleString('pt-BR');
+
+  let wpc=clamp(
+    water/wgoal*100,
+    0,
+    100
+  );
+
+  document.getElementById('waterPct').textContent=
+    Math.round(wpc)+'%';
+
+  document.getElementById('waterBar').style.width=
+    wpc+'%';
+
+  document.getElementById('waterMsg').textContent=
+    water>=wgoal
+      ?'Meta de água atingida! 💧✨'
+      :'Vamos começar 💧';
+
+
+  renderChecks(d);
+  renderFood(d);
+
+
+  /* MOCCACCINO */
+
+  document.getElementById('sugarCount').textContent=
+    d.sugar;
+
+  document.getElementById('sugarBar').style.width=
+    Math.min(100,d.sugar*50)+'%';
+
+  document.getElementById('sugarLabel').textContent=
+    d.sugar===0
+      ?'Você conseguiu! 💗'
+      :d.sugar===1
+        ?'Ocasional 🌷'
+        :'Atenção, sem culpa 💗';
+
+  document.getElementById('sugarPct').textContent=
+    Math.max(
+      0,
+      100-d.sugar*30
+    )+'%';
+
+
+  /*
+    NOVA CONTAGEM CORRETA
+  */
+
+  const streak=await sugarStreak();
+
+  const avoided=await sugarAvoided();
+
+  document.getElementById('sugarStreak').textContent=
+    streak;
+
+  document.getElementById('sugarAvoided').textContent=
+    avoided;
+
+
+  /* DIAS DO PROJETO */
+
+  let dates=daysInPeriod();
+
+  let done=0;
+
+  for(let x of dates){
+
+    let q=await dayData(x);
+
+    let score=
+      q.checklist.filter(Boolean).length;
+
+    if(score===checklist.length)
+      done++;
+
+  }
+
+  let elapsed=
+    clamp(
+      Math.floor(
+        (parse(today())-parse(START))/86400000
+      )+1,
+      0,
+      dates.length
+    );
+
+  document.getElementById('daysSummary').textContent=
+    `${done} dias concluídos de ${dates.length} · ${Math.max(0,dates.length-elapsed)} dias restantes no período`;
+
+
+  let completed=
+    d.checklist.filter(Boolean).length;
+
+  let daypc=
+    Math.round(
+      completed/checklist.length*100
+    );
+
+  document.getElementById('dayPct').textContent=
+    daypc+'%';
+
+  document.getElementById('dayBar').style.width=
+    daypc+'%';
+
+  document.getElementById('checkPct').textContent=
+    daypc+'%';
+
+  document.getElementById('checkBar').style.width=
+    daypc+'%';
+
+
+  let foodpc=
+    Math.round(
+      d.food.filter(Boolean).length/
+      foodItems.length*100
+    );
+
+  document.getElementById('foodPct').textContent=
+    foodpc+'%';
+
+
+  renderCalendar();
+  renderDiary(d);
+  renderBadges(weights,done);
+  renderWeekly();
+  renderGoals();
+  renderWaterHistory();
+  drawChart(weights);
+
+
+  let now=parse(today());
+  let vac=parse(VAC);
+
+  document.getElementById('vacationText').textContent=
+    now<vac
+      ?`Faltam ${Math.ceil((vac-now)/86400000)} dias para as férias.`
+      :'Você está de férias! 🌴💗';
+}
+
+function renderChecks(d){
+
+  document.getElementById('dailyChecklist').innerHTML=
+    checklist.map((x,i)=>`
+
+      <label class="check ${d.checklist[i]?'done':''}">
+
+        <input
+          type="checkbox"
+          data-check="${i}"
+          ${d.checklist[i]?'checked':''}
+        >
+
+        <span>${x}</span>
+
+      </label>
+
+    `).join('');
+}
+
+function renderFood(d){
+
+  document.getElementById('foodChecklist').innerHTML=
+    foodItems.map((x,i)=>`
+
+      <label class="check ${d.food[i]?'done':''}">
+
+        <input
+          type="checkbox"
+          data-food="${i}"
+          ${d.food[i]?'checked':''}
+        >
+
+        <span>${x}</span>
+
+      </label>
+
+    `).join('');
+}
+
+
+async function renderWaterHistory(){
+
+  let arr=[];
+
+  for(
+    let x of daysInPeriod().slice(-7)
+  ){
+
+    let d=await dayData(x);
+
+    arr.push(`
+      <span class="pill">
+        ${x.slice(5)} ·
+        ${(d.water/1000).toFixed(1)}L
+      </span>
+    `);
+
+  }
+
+  document.getElementById('waterHistory').innerHTML=
+    arr.join('');
+}
+
+
+function renderCalendar(){
+
+  let g=document.getElementById('calendarGrid');
+
+  g.innerHTML='';
+
+  let a=parse(START);
+
+  let offset=a.getDay();
+
+  for(let i=0;i<offset;i++)
+    g.innerHTML+='<div></div>';
+
+  for(let x of daysInPeriod()){
+
+    let b=document.createElement('button');
+
+    b.className='day';
+
+    b.dataset.date=x;
+
+    b.innerHTML=`
+      <b>${parse(x).getDate()}</b>
+      <br>
+      <span class="muted">
+        ${x===BDAY?'🎂':x===today()?'Hoje':''}
+      </span>
+    `;
+
+    dayData(x).then(d=>{
+
+      let score=
+        d.checklist.filter(Boolean).length;
+
+      b.classList.toggle(
+        'complete',
+        score===checklist.length
+      );
+
+      b.classList.toggle(
+        'partial',
+        score>0&&score<checklist.length
+      );
+
+      b.classList.toggle(
+        'bday',
+        x===BDAY
+      );
+
+    });
+
+    b.onclick=()=>openDay(x);
+
+    g.appendChild(b);
+  }
+}
+
+
+async function openDay(date){
+
+  let d=await dayData(date);
+
+  openModal(`
+
+    <div class="row">
+
+      <h3>
+        📅 ${date.split('-').reverse().join('/')}
+      </h3>
+
+      <button
+        class="icon-btn"
+        onclick="closeModal()"
+      >
+        ✕
+      </button>
+
+    </div>
+
+    <div class="field">
+      <label>Peso (kg)</label>
+      <input
+        id="modalWeight"
+        type="number"
+        step=".1"
+        value=""
+      >
+    </div>
+
+    <div class="field">
+      <label>Água (ml)</label>
+      <input
+        id="modalWater"
+        type="number"
+        value="${d.water}"
+      >
+    </div>
+
+    <div class="field">
+      <label>Moccaccinos/chocolates</label>
+      <input
+        id="modalSugar"
+        type="number"
+        min="0"
+        value="${d.sugar}"
+      >
+    </div>
+
+    <div class="field">
+      <label>Observações</label>
+      <textarea id="modalNotes">${d.notes||''}</textarea>
+    </div>
+
+    <button
+      class="btn primary"
+      id="saveDayModal"
+    >
+      Salvar dia
+    </button>
+
+  `);
+
+  let w=await all('weights');
+
+  let found=w.find(q=>q.date===date);
+
+  document.getElementById('modalWeight').value=
+    found?.weight??'';
+
+  document.getElementById('saveDayModal').onclick=
+    async()=>{
+
+      d.water=
+        +document.getElementById('modalWater').value||0;
+
+      d.sugar=
+        Math.max(
+          0,
+          +document.getElementById('modalSugar').value||0
+        );
+
+      d.notes=
+        document.getElementById('modalNotes').value;
+
+      await saveDay(d);
+
+      if(
+        document.getElementById('modalWeight').value
+      ){
+
+        await put('weights',{
+          id:found?.id,
+          date,
+          weight:
+            +document.getElementById('modalWeight').value
+        });
+
+      }
+
+      closeModal();
+
+      toast('Dia salvo com sucesso.');
+
+      render();
+    };
+}
+
+
+function renderDiary(d){
+
+  journal.value=d.journal||'';
+
+  hunger.value=d.hunger||3;
+
+  energy.value=d.energy||3;
+
+  notes.value=d.notes||'';
+
+  hungerOut.value=hunger.value;
+
+  energyOut.value=energy.value;
+}
+
+
+function renderBadges(weights,done){
+
+  let first=done>=1;
+
+  let maxLost=Math.max(
+    0,
+    ...weights.map(
+      w=>state.initialWeight-w.weight
+    )
+  );
+
+  let latest=
+    weights.at(-1)?.weight??
+    state.initialWeight;
+
+  let defs=[
+
+    ['🌱','Primeiro dia concluído',first],
+
+    ['💧','2 L de água',false],
+
+    ['☕','3 dias sem moccaccino',false],
+
+    ['🔥','7 dias de consistência',done>=7],
+
+    ['🌷','14 dias de consistência',done>=14],
+
+    ['🏆','30 dias acompanhando',done>=30],
+
+    ['⚖️','Primeiro kg perdido',maxLost>=1],
+
+    ['🎯','Chegou aos 65 kg',latest<=65],
+
+    ['💗','Chegou aos 63 kg',latest<=63],
+
+    ['👑','Chegou aos 60 kg',latest<=60]
+
+  ];
+
+  badges.innerHTML=
+    defs.map(x=>`
+
+      <div class="badge ${x[2]?'unlocked':''}">
+
+        <b>
+          ${x[0]} ${x[1]}
+        </b>
+
+        <span class="muted">
+          ${x[2]?'Desbloqueada':'Bloqueada'}
+        </span>
+
+      </div>
+
+    `).join('');
+}
+
+
+async function renderWeekly(){
+
+  let dates=daysInPeriod();
+
+  let end=parse(today());
+
+  let start=new Date(end);
+
+  start.setDate(
+    start.getDate()-6
+  );
+
+  let ds=dates.filter(
+    x=>parse(x)>=start&&parse(x)<=end
+  );
+
+  let ws=[];
+
+  for(let x of ds){
+
+    let d=await dayData(x);
+
+    ws.push({
+      date:x,
+      d
+    });
+
+  }
+
+  let waters=
+    ws.map(x=>x.d.water);
+
+  let complete=
+    ws.filter(
+      x=>x.d.checklist.every(Boolean)
+    ).length;
+
+  let sugar=
+    ws.reduce(
+      (a,x)=>a+x.d.sugar,
+      0
+    );
+
+  let weights=await all('weights');
+
+  let ww=
+    weights.filter(
+      x=>parse(x.date)>=start&&
+         parse(x.date)<=end
+    ).sort(
+      (a,b)=>a.date.localeCompare(b.date)
+    );
+
+  let diff=
+    ww.length>1
+      ?ww.at(-1).weight-ww[0].weight
+      :0;
+
+  weeklySummary.innerHTML=`
+
+    <p>
+      Peso inicial da semana:
+      <b>
+        ${ww[0]?fmt(ww[0].weight)+' kg':'—'}
+      </b>
+    </p>
+
+    <p>
+      Peso final da semana:
+      <b>
+        ${ww.at(-1)?fmt(ww.at(-1).weight)+' kg':'—'}
+      </b>
+    </p>
+
+    <p>
+      Diferença:
+      <b>
+        ${ww.length>1?fmt(diff)+' kg':'—'}
+      </b>
+    </p>
+
+    <p>
+      Média de água:
+      <b>
+        ${
+          ws.length
+            ?(
+              waters.reduce((a,b)=>a+b,0)/
+              waters.length/
+              1000
+            ).toFixed(1)
+             .replace('.',',')+' L'
+            :'—'
+        }
+      </b>
+    </p>
+
+    <p>
+      Dias completos:
+      <b>${complete} de ${ds.length}</b>
+      · Moccaccinos:
+      <b>${sugar}</b>
+    </p>
+
+  `;
+}
+
+
+function renderGoals(){
+
+  let el=document.getElementById('goals');
+
+  if(!state.goals.length){
+
+    el.innerHTML=
+      '<p class="muted">Nenhuma meta criada ainda.</p>';
+
+    return;
+  }
+
+  el.innerHTML=
+    state.goals.map((g,i)=>`
+
+      <div class="milestone">
+
+        <div style="flex:1">
+
+          <div class="row">
+
+            <b style="${g.done?'text-decoration:line-through':''}">
+              ${g.title}
+            </b>
+
+            <button
+              class="icon-btn"
+              onclick="editGoal(${i})"
+            >
+              ✏️
+            </button>
+
+          </div>
+
+          <div class="muted">
+            ${g.desc||''}
+            ${g.due?'· prazo '+g.due:''}
+          </div>
+
+        </div>
+
+        <input
+          type="checkbox"
+          style="width:22px;height:22px;accent-color:var(--pink)"
+          ${g.done?'checked':''}
+          onchange="toggleGoal(${i},this.checked)"
+        >
+
+      </div>
+
+    `).join('');
+}
+
+
+async function drawChart(weights){
+
+  let c=document.getElementById('weightChart');
+
+  let ctx=c.getContext('2d');
+
+  let r=window.devicePixelRatio||1;
+
+  let w=c.clientWidth;
+
+  let h=220;
+
+  c.width=w*r;
+
+  c.height=h*r;
+
+  ctx.scale(r,r);
+
+  ctx.clearRect(0,0,w,h);
+
+  ctx.font='12px system-ui';
+
+  ctx.fillStyle='#817680';
+
+  let allW=[
+    {
+      date:START,
+      weight:state.initialWeight
+    },
+    ...weights
+  ].sort(
+    (a,b)=>a.date.localeCompare(b.date)
+  );
+
+  let min=
+    Math.min(
+      state.goalWeight,
+      ...allW.map(x=>x.weight)
+    )-1;
+
+  let max=
+    Math.max(
+      state.initialWeight,
+      ...allW.map(x=>x.weight)
+    )+1;
+
+  ctx.strokeStyle='#eee4ed';
+
+  for(let i=0;i<5;i++){
+
+    let y=25+i*(h-50)/4;
+
+    ctx.beginPath();
+
+    ctx.moveTo(35,y);
+
+    ctx.lineTo(w-12,y);
+
+    ctx.stroke();
+
+    ctx.fillText(
+      (max-(max-min)*i/4).toFixed(1),
+      3,
+      y+4
+    );
+
+  }
+
+  let yGoal=
+    25+
+    (max-state.goalWeight)/
+    (max-min)*
+    (h-50);
+
+  ctx.setLineDash([5,5]);
+
+  ctx.strokeStyle='#c98bb8';
+
+  ctx.beginPath();
+
+  ctx.moveTo(35,yGoal);
+
+  ctx.lineTo(w-12,yGoal);
+
+  ctx.stroke();
+
+  ctx.setLineDash([]);
+
+  ctx.strokeStyle='#9f8ac5';
+
+  ctx.lineWidth=3;
+
+  ctx.beginPath();
+
+  allW.forEach((p,i)=>{
+
+    let x=
+      35+
+      (parse(p.date)-parse(START))/
+      (parse(END)-parse(START))*
+      (w-47);
+
+    let y=
+      25+
+      (max-p.weight)/
+      (max-min)*
+      (h-50);
+
+    if(i)
+      ctx.lineTo(x,y);
+    else
+      ctx.moveTo(x,y);
+
+  });
+
+  ctx.stroke();
+
+  ctx.fillStyle='#9f8ac5';
+
+  allW.forEach(p=>{
+
+    let x=
+      35+
+      (parse(p.date)-parse(START))/
+      (parse(END)-parse(START))*
+      (w-47);
+
+    let y=
+      25+
+      (max-p.weight)/
+      (max-min)*
+      (h-50);
+
+    ctx.beginPath();
+
+    ctx.arc(
+      x,
+      y,
+      4,
+      0,
+      Math.PI*2
+    );
+
+    ctx.fill();
+
+  });
+
+}
+
+
+function openModal(body){
+
+  document.getElementById('dialog').innerHTML=
+    body;
+
+  document.getElementById('modal')
+    .classList.add('show');
+}
+
+
+function closeModal(){
+
+  document.getElementById('modal')
+    .classList.remove('show');
+}
+
+
+async function settings(){
+
+  openModal(`
+
+    <div class="row">
+
+      <h3>⚙️ Configurações</h3>
+
+      <button
+        class="icon-btn"
+        onclick="closeModal()"
+      >
+        ✕
+      </button>
+
+    </div>
+
+    <div class="field">
+
+      <label>Nome exibido</label>
+
+      <input
+        id="setName"
+        value="${state.name}"
+      >
+
+    </div>
+
+    <div class="formrow">
+
+      <div class="field">
+
+        <label>Peso inicial</label>
+
+        <input
+          id="setInitial"
+          type="number"
+          step=".1"
+          value="${state.initialWeight}"
+        >
+
+      </div>
+
+      <div class="field">
+
+        <label>Meta de peso</label>
+
+        <input
+          id="setGoal"
+          type="number"
+          step=".1"
+          value="${state.goalWeight}"
+        >
+
+      </div>
+
+    </div>
+
+    <div class="field">
+
+      <label>Meta diária de água (ml)</label>
+
+      <input
+        id="setWater"
+        type="number"
+        value="${state.waterGoal}"
+      >
+
+    </div>
+
+    <div class="field">
+
+      <label>Aparência</label>
+
+      <select id="setTheme">
+
+        <option
+          value="light"
+          ${state.theme==='light'?'selected':''}
+        >
+          Clara
+        </option>
+
+        <option
+          value="dark"
+          ${state.theme==='dark'?'selected':''}
+        >
+          Escura
+        </option>
+
+      </select>
+
+    </div>
+
+    <label class="check">
+
+      <input
+        id="setMotivation"
+        type="checkbox"
+        ${state.showMotivation?'checked':''}
+      >
+
+      <span>
+        Mostrar frase motivacional
+      </span>
+
+    </label>
+
+    <div class="quick">
+
+      <button
+        class="btn primary"
+        id="saveSettings"
+      >
+        Salvar configurações
+      </button>
+
+      <button
+        class="btn"
+        id="logoutBtn"
+      >
+        Sair da conta
+      </button>
+
+      <button
+        class="btn danger"
+        id="clearData"
+      >
+        Limpar todos os dados
+      </button>
+
+    </div>
+
+  `);
+
+  saveSettings.onclick=async()=>{
+
+    state.name=
+      setName.value||'TATI';
+
+    state.initialWeight=
+      +setInitial.value||67;
+
+    state.goalWeight=
+      +setGoal.value||60;
+
+    state.waterGoal=
+      +setWater.value||2000;
+
+    state.theme=
+      setTheme.value;
+
+    state.showMotivation=
+      setMotivation.checked;
+
+    await saveState();
+
+    applyTheme();
+
+    closeModal();
+
+    toast('Configurações salvas.');
+
+    render();
+
+  };
+
+
+  clearData.onclick=async()=>{
+
+    if(
+      confirm(
+        'Apagar todos os dados locais do aplicativo?'
+      )
+    ){
+
+      indexedDB.deleteDatabase(
+        'ProjetoTatiDB'
+      );
+
+      location.reload();
+
+    }
+
+  };
+
+}
+
+
+function applyTheme(){
+
+  if(state.theme==='dark'){
+
+    document.documentElement.style.setProperty(
+      '--bg',
+      '#211c22'
+    );
+
+    document.documentElement.style.setProperty(
+      '--card',
+      '#2b252c'
+    );
+
+    document.documentElement.style.setProperty(
+      '--text',
+      '#f5edf5'
+    );
+
+    document.documentElement.style.setProperty(
+      '--muted',
+      '#b9aeb9'
+    );
+
+    document.documentElement.style.setProperty(
+      '--line',
+      '#443b45'
+    );
+
+  }else{
+
+    document.documentElement.style.removeProperty(
+      '--bg'
+    );
+
+    document.documentElement.style.removeProperty(
+      '--card'
+    );
+
+    document.documentElement.style.removeProperty(
+      '--text'
+    );
+
+    document.documentElement.style.removeProperty(
+      '--muted'
+    );
+
+    document.documentElement.style.removeProperty(
+      '--line'
+    );
+
+  }
+
+}
+
+
+function confetti(){
+
+  let c=document.getElementById('confetti');
+
+  c.innerHTML='';
+
+  for(let i=0;i<45;i++){
+
+    let p=document.createElement('i');
+
+    p.className='piece';
+
+    p.style.left=
+      Math.random()*100+'%';
+
+    p.style.background=[
+      '#c98bb8',
+      '#9f8ac5',
+      '#e8b3d3',
+      '#d9ad70'
+    ][i%4];
+
+    p.style.animationDelay=
+      Math.random()*.4+'s';
+
+    c.appendChild(p);
+
+  }
+
+  setTimeout(
+    ()=>c.innerHTML='',
+    1900
+  );
+}
+
+
+async function newGoal(i=null){
+
+  let g=
+    i==null
+      ?{
+        title:'',
+        desc:'',
+        due:'',
+        done:false
+      }
+      :state.goals[i];
+
+  openModal(`
+
+    <div class="row">
+
+      <h3>
+        ${i==null?'🎯 Nova meta':'✏️ Editar meta'}
+      </h3>
+
+      <button
+        class="icon-btn"
+        onclick="closeModal()"
+      >
+        ✕
+      </button>
+
+    </div>
+
+    <div class="field">
+
+      <label>Título</label>
+
+      <input
+        id="gTitle"
+        value="${g.title}"
+      >
+
+    </div>
+
+    <div class="field">
+
+      <label>Descrição / detalhes</label>
+
+      <textarea id="gDesc">${g.desc||''}</textarea>
+
+    </div>
+
+    <div class="field">
+
+      <label>Prazo</label>
+
+      <input
+        id="gDue"
+        type="date"
+        value="${g.due||''}"
+      >
+
+    </div>
+
+    <button
+      class="btn primary"
+      id="saveGoal"
+    >
+      Salvar meta
+    </button>
+
+    ${
+      i!=null
+        ?'<button class="btn danger" id="deleteGoal" style="margin-left:8px">Excluir</button>'
+        :''
+    }
+
+  `);
+
+  saveGoal.onclick=async()=>{
+
+    let n={
+      ...g,
+      title:
+        gTitle.value.trim()||
+        'Meta sem título',
+      desc:gDesc.value,
+      due:gDue.value,
+      lastEdit:Date.now()
+    };
+
+    if(i==null)
+      state.goals.push(n);
+    else
+      state.goals[i]=n;
+
+    await put('meta',{
+      key:'goals',
+      value:state.goals
+    });
+
+    closeModal();
+
+    toast('Meta salva com sucesso.');
+
+    render();
+
+  };
+
+  if(i!=null)
+
+    deleteGoal.onclick=async()=>{
+
+      if(
+        confirm('Excluir esta meta?')
+      ){
+
+        state.goals.splice(i,1);
+
+        await put('meta',{
+          key:'goals',
+          value:state.goals
+        });
+
+        closeModal();
+
+        toast('Meta excluída.');
+
+        render();
+
+      }
+
+    };
+}
+
+
+function editGoal(i){
+  newGoal(i);
+}
+
+
+async function toggleGoal(i,v){
+
+  state.goals[i].done=v;
+
+  state.goals[i].completedAt=
+    v?today():null;
+
+  await put('meta',{
+    key:'goals',
+    value:state.goals
+  });
+
+  toast(
+    v
+      ?'Meta concluída.'
+      :'Meta reaberta.'
+  );
+
+  render();
+}
+
+
+document.addEventListener(
+  'click',
+  async e=>{
+
+    let w=e.target.dataset.water;
+
+    if(w){
+
+      let d=await dayData();
+
+      d.water+=+w;
+
+      await saveDay(d);
+
+      toast('Água atualizada.');
+
+      render();
+    }
+
+    if(e.target.matches('[data-check]')){
+
+      let d=await dayData();
+
+      d.checklist[
+        +e.target.dataset.check
+      ]=e.target.checked;
+
+      await saveDay(d);
+
+      render();
+    }
+
+    if(e.target.matches('[data-food]')){
+
+      let d=await dayData();
+
+      d.food[
+        +e.target.dataset.food
+      ]=e.target.checked;
+
+      await saveDay(d);
+
+      render();
+    }
+
+  }
+);
+
+
+document.getElementById('sugarPlus')
+.onclick=async()=>{
+
+  let d=await dayData();
+
+  d.sugar++;
+
+  await saveDay(d);
+
+  render();
+
+};
+
+
+document.getElementById('sugarMinus')
+.onclick=async()=>{
+
+  let d=await dayData();
+
+  d.sugar=
+    Math.max(
+      0,
+      d.sugar-1
+    );
+
+  await saveDay(d);
+
+  render();
+
+};
+
+
+document.getElementById('waterManual')
+.onclick=async()=>{
+
+  let n=prompt(
+    'Quantos ml você quer adicionar?',
+    '250'
+  );
+
+  if(n){
+
+    let d=await dayData();
+
+    d.water+=
+      Math.max(
+        0,
+        +n||0
+      );
+
+    await saveDay(d);
+
+    render();
+
+  }
+
+};
+
+
+document.getElementById('saveWeight')
+.onclick=async()=>{
+
+  let w=+weightInput.value;
+
+  if(!w)
+    return;
+
+  await put('weights',{
+    date:
+      weightDate.value||today(),
+    weight:w
+  });
+
+  toast('Peso salvo.');
+
+  render();
+
+};
+
+
+document.getElementById('saveDiary')
+.onclick=async()=>{
+
+  let d=await dayData();
+
+  d.journal=
+    journal.value;
+
+  d.hunger=
+    +hunger.value;
+
+  d.energy=
+    +energy.value;
+
+  d.notes=
+    notes.value;
+
+  d.planned=
+    +planned.value||0;
+
+  d.free=
+    +free.value||0;
+
+  await saveDay(d);
+
+  toast('Diário salvo.');
+
+  render();
+
+};
+
+
+hunger.oninput=()=>{
+  hungerOut.value=
+    hunger.value;
+};
+
+energy.oninput=()=>{
+  energyOut.value=
+    energy.value;
+};
+
+
+document.getElementById('settingsBtn')
+.onclick=settings;
+
+document.getElementById('newGoal')
+.onclick=()=>newGoal();
+
+document.getElementById('birthdayBtn')
+.onclick=()=>confetti();
+
+
+document.getElementById('badDay')
+.onclick=()=>{
+
+  badDayPanel.classList.toggle(
+    'hidden'
+  );
+
+  badChecks.innerHTML=[
+    'Beber água',
+    'Fazer uma refeição normal',
+    'Não compensar pulando refeições',
+    'Recomeçar na próxima refeição'
+  ].map(x=>`
+
+    <label class="check">
+
+      <input type="checkbox">
+
+      <span>${x}</span>
+
+    </label>
+
+  `).join('');
+
+};
+
+
+document.querySelectorAll(
+  '.nav button'
+).forEach(b=>{
+
+  b.onclick=()=>{
+
+    document.querySelectorAll(
+      '.nav button'
+    ).forEach(
+      x=>x.classList.remove('active')
+    );
+
+    b.classList.add('active');
+
+    document.getElementById(
+      b.dataset.scroll
+    ).scrollIntoView({
+      behavior:'smooth',
+      block:'start'
+    });
+
+  };
+
+});
+
+
+window.addEventListener(
+  'beforeinstallprompt',
+  e=>{
+
+    e.preventDefault();
+
+    deferredPrompt=e;
+
+    installBtn.hidden=false;
+
+  }
+);
+
+
+installBtn.onclick=async()=>{
+
+  if(deferredPrompt){
+
+    deferredPrompt.prompt();
+
+    deferredPrompt=null;
+
+  }
+
+};
+
+
+document.getElementById('modal')
+.onclick=e=>{
+
+  if(e.target.id==='modal')
+    closeModal();
+
+};
+
+
+(async()=>{
+
+  await reqDB();
+
+  await load();
+
+  await render();
+
+  if(
+    'serviceWorker' in navigator &&
+    location.protocol!=='file:'
+  ){
+
+    navigator.serviceWorker
+      .register('sw.js')
+      .catch(()=>{});
+
+  }
+
+})();
+
 </script>
 
+
 <script>
-const { createClient } = window.supabase;
-const florescerAuth = createClient(window.FLORESCER_SUPABASE_URL, window.FLORESCER_SUPABASE_KEY);
-window.florescerAuth = florescerAuth;
+
+const {createClient}=window.supabase;
+
+const florescerAuth=
+  createClient(
+    window.FLORESCER_SUPABASE_URL,
+    window.FLORESCER_SUPABASE_KEY
+  );
+
+window.florescerAuth=
+  florescerAuth;
+
 
 function showAuthMsg(t,ok=false){
-  const e=document.getElementById('authMsg');
+
+  const e=
+    document.getElementById(
+      'authMsg'
+    );
+
   e.textContent=t;
-  e.style.color=ok?'#4f8b6d':'#a24f4f';
+
+  e.style.color=
+    ok
+      ?'#4f8b6d'
+      :'#a24f4f';
+
 }
+
+
 function switchAuth(mode){
-  const login=mode==='login';
-  loginTab.classList.toggle('active',login);
-  signupTab.classList.toggle('active',!login);
-  authConfirmWrap.classList.toggle('hidden',login);
-  authSubmit.textContent=login?'Entrar':'Criar conta';
-  authPassword.autocomplete=login?'current-password':'new-password';
+
+  const login=
+    mode==='login';
+
+  loginTab.classList.toggle(
+    'active',
+    login
+  );
+
+  signupTab.classList.toggle(
+    'active',
+    !login
+  );
+
+  authConfirmWrap.classList.toggle(
+    'hidden',
+    login
+  );
+
+  authSubmit.textContent=
+    login
+      ?'Entrar'
+      :'Criar conta';
+
+  authPassword.autocomplete=
+    login
+      ?'current-password'
+      :'new-password';
+
   showAuthMsg('');
+
 }
-loginTab.onclick=()=>switchAuth('login');
-signupTab.onclick=()=>switchAuth('signup');
+
+
+loginTab.onclick=()=>{
+  switchAuth('login');
+};
+
+signupTab.onclick=()=>{
+  switchAuth('signup');
+};
+
 
 async function cloudSignIn(){
-  const email=authEmail.value.trim().toLowerCase(), pass=authPassword.value;
-  if(!email || !email.includes('@')) return showAuthMsg('Digite um e-mail válido.');
-  if(pass.length<6) return showAuthMsg('A senha precisa ter pelo menos 6 caracteres.');
-  const {error}=await florescerAuth.auth.signInWithPassword({email,password:pass});
-  if(error) return showAuthMsg(error.message.includes('Invalid login credentials')?'E-mail ou senha incorretos.':error.message);
+
+  const email=
+    authEmail.value
+      .trim()
+      .toLowerCase();
+
+  const pass=
+    authPassword.value;
+
+  if(
+    !email||
+    !email.includes('@')
+  )
+    return showAuthMsg(
+      'Digite um e-mail válido.'
+    );
+
+  if(pass.length<6)
+    return showAuthMsg(
+      'A senha precisa ter pelo menos 6 caracteres.'
+    );
+
+  const {error}=
+    await florescerAuth.auth
+      .signInWithPassword({
+        email,
+        password:pass
+      });
+
+  if(error)
+
+    return showAuthMsg(
+      error.message.includes(
+        'Invalid login credentials'
+      )
+        ?'E-mail ou senha incorretos.'
+        :error.message
+    );
+
   await unlock();
+
 }
+
+
 async function cloudSignUp(){
-  const email=authEmail.value.trim().toLowerCase(), pass=authPassword.value, confirm=authConfirm.value;
-  if(!email || !email.includes('@')) return showAuthMsg('Digite um e-mail válido.');
-  if(pass.length<6) return showAuthMsg('A senha precisa ter pelo menos 6 caracteres.');
-  if(pass!==confirm) return showAuthMsg('As senhas não são iguais.');
-  const redirectTo=location.href.split('#')[0].split('?')[0];
-  const {data,error}=await florescerAuth.auth.signUp({email,password:pass,options:{emailRedirectTo:redirectTo}});
-  if(error) return showAuthMsg(error.message);
+
+  const email=
+    authEmail.value
+      .trim()
+      .toLowerCase();
+
+  const pass=
+    authPassword.value;
+
+  const confirm=
+    authConfirm.value;
+
+  if(
+    !email||
+    !email.includes('@')
+  )
+    return showAuthMsg(
+      'Digite um e-mail válido.'
+    );
+
+  if(pass.length<6)
+    return showAuthMsg(
+      'A senha precisa ter pelo menos 6 caracteres.'
+    );
+
+  if(pass!==confirm)
+    return showAuthMsg(
+      'As senhas não são iguais.'
+    );
+
+  const redirectTo=
+    location.href
+      .split('#')[0]
+      .split('?')[0];
+
+  const {data,error}=
+    await florescerAuth.auth
+      .signUp({
+        email,
+        password:pass,
+        options:{
+          emailRedirectTo:redirectTo
+        }
+      });
+
+  if(error)
+    return showAuthMsg(
+      error.message
+    );
+
   if(!data.session){
-    showAuthMsg('Conta criada! Confira seu e-mail para confirmar a conta.',true);
+
+    showAuthMsg(
+      'Conta criada! Confira seu e-mail para confirmar a conta.',
+      true
+    );
+
   }else{
+
     await unlock();
+
   }
+
 }
-authSubmit.onclick=async()=>{
-  authSubmit.disabled=true;
-  try{
-    if(authConfirmWrap.classList.contains('hidden')) await cloudSignIn();
-    else await cloudSignUp();
-  }finally{authSubmit.disabled=false;}
+
+
+authSubmit.onclick=
+  async()=>{
+
+    authSubmit.disabled=true;
+
+    try{
+
+      if(
+        authConfirmWrap
+          .classList
+          .contains('hidden')
+      ){
+
+        await cloudSignIn();
+
+      }else{
+
+        await cloudSignUp();
+
+      }
+
+    }finally{
+
+      authSubmit.disabled=false;
+
+    }
+
+  };
+
+
+const forgot=
+  document.createElement('button');
+
+forgot.type='button';
+
+forgot.className='btn';
+
+forgot.style.marginTop='8px';
+
+forgot.textContent=
+  'Esqueci minha senha';
+
+document.getElementById(
+  'authSubmit'
+).after(forgot);
+
+
+forgot.onclick=async()=>{
+
+  const email=
+    authEmail.value
+      .trim()
+      .toLowerCase();
+
+  if(
+    !email||
+    !email.includes('@')
+  )
+    return showAuthMsg(
+      'Digite seu e-mail para receber o link de redefinição.'
+    );
+
+  const redirectTo=
+    location.href
+      .split('#')[0]
+      .split('?')[0];
+
+  const {error}=
+    await florescerAuth.auth
+      .resetPasswordForEmail(
+        email,
+        {redirectTo}
+      );
+
+  if(error)
+    return showAuthMsg(
+      error.message
+    );
+
+  showAuthMsg(
+    'Enviamos um link para redefinir sua senha. Confira seu e-mail.',
+    true
+  );
+
 };
 
-const forgot=document.createElement('button');
-forgot.type='button';
-forgot.className='btn';
-forgot.style.marginTop='8px';
-forgot.textContent='Esqueci minha senha';
-document.getElementById('authSubmit').after(forgot);
-forgot.onclick=async()=>{
-  const email=authEmail.value.trim().toLowerCase();
-  if(!email || !email.includes('@')) return showAuthMsg('Digite seu e-mail para receber o link de redefinição.');
-  const redirectTo=location.href.split('#')[0].split('?')[0];
-  const {error}=await florescerAuth.auth.resetPasswordForEmail(email,{redirectTo});
-  if(error) return showAuthMsg(error.message);
-  showAuthMsg('Enviamos um link para redefinir sua senha. Confira seu e-mail.',true);
-};
 
 async function unlock(){
-  localStorage.setItem('florescer_session','1');
-  document.getElementById('authScreen').style.display='none';
+
+  localStorage.setItem(
+    'florescer_session',
+    '1'
+  );
+
+  document.getElementById(
+    'authScreen'
+  ).style.display='none';
+
   document.title='Florescer';
-  if(typeof render==='function') await render();
-  toast('Bem-vinda ao Florescer 🌷');
+
+  if(typeof render==='function')
+    await render();
+
+  toast(
+    'Bem-vinda ao Florescer 🌷'
+  );
+
 }
+
+
 async function handleRecovery(){
-  if(location.hash.includes('type=recovery')){
-    document.getElementById('authScreen').style.display='flex';
+
+  if(
+    location.hash.includes(
+      'type=recovery'
+    )
+  ){
+
+    document.getElementById(
+      'authScreen'
+    ).style.display='flex';
+
     switchAuth('login');
-    authConfirmWrap.classList.remove('hidden');
-    authSubmit.textContent='Salvar nova senha';
-    authSubmit.onclick=async()=>{
-      const p=authPassword.value,c=authConfirm.value;
-      if(p.length<6)return showAuthMsg('A senha precisa ter pelo menos 6 caracteres.');
-      if(p!==c)return showAuthMsg('As senhas não são iguais.');
-      const {error}=await florescerAuth.auth.updateUser({password:p});
-      if(error)return showAuthMsg(error.message);
-      history.replaceState({},'',location.pathname+location.search);
-      await unlock();
-    };
+
+    authConfirmWrap
+      .classList
+      .remove('hidden');
+
+    authSubmit.textContent=
+      'Salvar nova senha';
+
+    authSubmit.onclick=
+      async()=>{
+
+        const p=
+          authPassword.value;
+
+        const c=
+          authConfirm.value;
+
+        if(p.length<6)
+          return showAuthMsg(
+            'A senha precisa ter pelo menos 6 caracteres.'
+          );
+
+        if(p!==c)
+          return showAuthMsg(
+            'As senhas não são iguais.'
+          );
+
+        const {error}=
+          await florescerAuth.auth
+            .updateUser({
+              password:p
+            });
+
+        if(error)
+          return showAuthMsg(
+            error.message
+          );
+
+        history.replaceState(
+          {},
+          '',
+          location.pathname+
+          location.search
+        );
+
+        await unlock();
+
+      };
+
   }
+
 }
+
+
 (async()=>{
+
   await handleRecovery();
-  const {data}=await florescerAuth.auth.getSession();
+
+  const {data}=
+    await florescerAuth.auth
+      .getSession();
+
   if(data.session){
-    localStorage.setItem('florescer_session','1');
-    document.getElementById('authScreen').style.display='none';
+
+    localStorage.setItem(
+      'florescer_session',
+      '1'
+    );
+
+    document.getElementById(
+      'authScreen'
+    ).style.display='none';
+
   }
-  florescerAuth.auth.onAuthStateChange(async(event,session)=>{
-    if(event==='SIGNED_OUT'){
-      document.getElementById('authScreen').style.display='flex';
-      localStorage.removeItem('florescer_session');
-    }
-  });
+
+  florescerAuth.auth
+    .onAuthStateChange(
+      async(event,session)=>{
+
+        if(event==='SIGNED_OUT'){
+
+          document.getElementById(
+            'authScreen'
+          ).style.display='flex';
+
+          localStorage.removeItem(
+            'florescer_session'
+          );
+
+        }
+
+      }
+    );
+
 })();
+
 </script>
+
 </body>
 </html>
